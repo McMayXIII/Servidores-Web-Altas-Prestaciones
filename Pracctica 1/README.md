@@ -14,6 +14,10 @@ En primer lugar pulsamos sobre el icono ***Create a New Virtual Machine*** que s
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img1.png)
 
+Seleccionamos la intalación ***Typica*** y pulsamos en next, a continuación seleccionamos la opción ***I will the operating system later. The virtual machine will be created with a blank hard disk*** (para insertar posteriormente la ISO de Ubuntu Server 16.04 LTS 64bits) y pulsamos en next.
 
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img2.png) ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img3.png)
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img2.png)![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img3.png)
+En el siguiente paso seleccionmos el systema que vamos a usar ***LINUX*** y la version ***Ubuntu 64-bits*** y le asignamos un nombre.
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img4.png) ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img5.png)
