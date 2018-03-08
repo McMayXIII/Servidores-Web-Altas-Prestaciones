@@ -1,4 +1,4 @@
-# Practica 1: Herramientas
+# Practica 1: Preparación de Herramientas
 
 Para esta práctica se realizará la virtualización de dos maquinas virtuales. En ellas se instalará un Ubuntu Server 16.04 LTS de 64 bits y se instalarán los servidor **LAMP** y **SSH**.
 
@@ -8,4 +8,7 @@ Para esta práctica se realizará la virtualización de dos maquinas virtuales. 
 
 Para esta práctica utilizaremos la herramienta **VMware Workstation** (se puede dercargar [aquí](https://www.vmware.com/es.html) ).
 
+## Generando las maquinas virtuales
+
+En primer lugar pulsamos sobre el icono *Create a New Virtual Machine* que se señala en la imagen.
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img1.png)
