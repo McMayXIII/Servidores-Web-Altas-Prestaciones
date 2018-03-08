@@ -10,5 +10,6 @@ Para esta práctica utilizaremos la herramienta **VMware Workstation** (se puede
 
 ## Generando las maquinas virtuales
 
-En primer lugar pulsamos sobre el icono *Create a New Virtual Machine* que se señala en la imagen.
+En primer lugar pulsamos sobre el icono ***Create a New Virtual Machine*** que se señala en la imagen.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img1.png)
