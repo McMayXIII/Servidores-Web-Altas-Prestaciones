@@ -41,3 +41,17 @@ Y por ultimo añadimos la ISO de ***Ubuntu Server 16.04 LTS***
 Una vez llegados a este punto tenemos la maquina virtual preparada para poder intalar el sistema operativo.
 
 ## Instalando Ubuntu Server 16.04 LTS 64bits
+
+**Ubuntu Server** es una variante de Ubuntu que sale con cada versión y está dedicada especialmente para su uso en **servidores**. El uso de Ubuntu como servidor se ha extendido mucho en los últimos años, sobretodo para el uso de **servidores web**, de un modo tanto particular como profesional.
+
+Un servidor es una máquina que nos proporciona algún servicio. Pueden ser de diferentes tipos, servidor web, servidor de base de datos, servidor de archivos, u otras diferentes funciones, incluso varias a la vez. No tienen porque ser grandes y potentes máquinas, podemos tener montado un servidor en casa en un ordenador antiguo, que nos sirva para tener guardados todos nuestros datos importantes y acceder a ellos desde cualquier otro ordenador o dispositivo desde nuestra casa, o incluso desde cualquier lugar.
+
+Ubuntu Server es un Sistema Operativo sin entorno gráfico (aunque podemos instalarlo) lo que quiere decir que todas las acciones se realizan mediante consola, y normalmente ni si quiera a través de el propio servidor, sino desde una conexión remota. El manejo de Ubuntu Server es muy similar al de cualquier otro Sistema Linux, pero con las particularidades de Ubuntu (como el sudo).
+
+Cuando estamos instalando Ubuntu Server nos hace una serie de preguntas sobre que tipo de servicios queremos instalar, entre una lista de los más típicos, y nos pregunta los parámetros necesarios para su configuración. De este modo podemos instalar de una forma fácil y sencilla un servidor acorde a nuestras necesidades en unos pocos minutos.
+
+Es muy habitual encontrarnos Ubuntu Server como sistema operativo en muchos de los VPS que podemos contratar en la mayoría de compañías, aunque también nos suelen dar a elegir otras distribuciones Linux.
+
+Pasos para instalar ubuntu, en primer lugar nos pide un nombre
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img10.png)
