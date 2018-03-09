@@ -12,31 +12,31 @@ Para esta práctica utilizaremos la herramienta **VMware Workstation** (se puede
 
 En primer lugar pulsamos sobre el icono ***Create a New Virtual Machine*** que se señala en la imagen.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img1.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img01.png)
 
 Seleccionamos la intalación ***Typica***, a continuación seleccionamos la opción ***I will the operating system later. The virtual machine will be created with a blank hard disk*** (para insertar posteriormente la ISO de Ubuntu Server 16.04 LTS 64bits).
 
- ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img2.png) ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img3.png)
+ ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img02.png) ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img03.png)
 
 En el siguiente paso seleccionmos el systema que vamos a usar ***LINUX*** y la version ***Ubuntu 64-bits*** y le asignamos un nombre.
 
- ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img4.png) ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img5.png)
+ ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img04.png) ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img05.png)
 
 Ahora asignamos el tamaño del disco duro 20 GB, y seleccionamos la opción ***Split virtual disk into multiple files***.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img6.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img06.png)
 
 En este apartado pasaremos a la configuración de red, donde tendremos dos tarjetas una para conectar las maquinas virtuales internamente entre si. Que para este caso trendra el nombre de ***VMnet0***.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img7.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img07.png)
 
 Ahora configuramos la otra tarjeta de red para que la maquina se comunique con el exterior sin problemas.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img8.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img08.png)
 
 Y por ultimo añadimos la ISO de ***Ubuntu Server 16.04 LTS***
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img9.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img09.png)
 
 Una vez llegados a este punto tenemos la maquina virtual preparada para poder intalar el sistema operativo.
 
