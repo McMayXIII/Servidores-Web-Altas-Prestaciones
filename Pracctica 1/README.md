@@ -52,6 +52,10 @@ Cuando estamos instalando Ubuntu Server nos hace una serie de preguntas sobre qu
 
 Es muy habitual encontrarnos Ubuntu Server como sistema operativo en muchos de los VPS que podemos contratar en la mayoría de compañías, aunque también nos suelen dar a elegir otras distribuciones Linux.
 
-Pasos para instalar ubuntu, en primer lugar nos pide un nombre
+Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso seleccionamos **español**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img10.png)
+
+as
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img11.png)
