@@ -26,16 +26,18 @@ Ahora asignamos el tamaño del disco duro 20 GB, y seleccionamos la opción ***S
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img6.png)
 
-Ahora insertamos otra tarjeta de red para que la maquina se comunique con el exterior sin problemas.
+En este apartado pasaremos a la configuración de red, donde tendremos dos tarjetas una para conectar las maquinas virtuales internamente entre si. Que para este caso trendra el nombre de ***VMnet0***.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img7.png)
 
-
+Ahora configuramos la otra tarjeta de red para que la maquina se comunique con el exterior sin problemas.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img8.png)
 
-a
+Y por ultimo añadimos la ISO de ***Ubuntu Server 16.04 LTS***
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img9.png)
 
-a
+Una vez llegados a este punto tenemos la maquina virtual preparada para poder intalar el sistema operativo.
+
+## Instalando Ubuntu Server 16.04 LTS 64bits
