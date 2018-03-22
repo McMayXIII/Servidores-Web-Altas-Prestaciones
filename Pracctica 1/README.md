@@ -117,3 +117,7 @@ Para ello insertamos el siguiente comando: ***su passwd root*** e insertamos la 
 Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img38.png)
+
+# Acceder por ssh de una máquina a otra #
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img39.png)
