@@ -106,23 +106,23 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img36.png)
 
-## Activando root ##
+### Activando root ###
 
 Para ello insertamos el siguiente comando: ***su passwd root*** e insertamos la contraseña.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img37.png)
 
-## Comprobando estado de apache ##
+### Comprobando estado de apache ###
 
 Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img38.png)
 
-# Acceder por ssh de una máquina a otra #
+## Acceder por ssh de una máquina a otra ##
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img39.png)
 
-# Acceder mediante la herramienta curl desde una máquina a la otra #
+## Acceder mediante la herramienta curl desde una máquina a la otra ##
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img40.png)
 
