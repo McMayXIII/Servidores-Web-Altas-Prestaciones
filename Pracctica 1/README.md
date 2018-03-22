@@ -1,4 +1,4 @@
-# Practica 1: Preparación de Herramientas
+# Practica 1: Preparación de Herramientas #
 
 Para esta práctica se realizará la virtualización de dos maquinas virtuales. En ellas se instalará un Ubuntu Server 16.04 LTS de 64 bits y se instalarán los servidor **LAMP** y **SSH**.
 
@@ -8,7 +8,7 @@ Para esta práctica se realizará la virtualización de dos maquinas virtuales. 
 
 Para esta práctica utilizaremos la herramienta **VMware Workstation** (se puede dercargar [aquí](https://www.vmware.com/es.html) ).
 
-## Generando las maquinas virtuales
+## Generando las maquinas virtuales ##
 
 En primer lugar pulsamos sobre el icono ***Create a New Virtual Machine*** que se señala en la imagen.
 
@@ -40,7 +40,7 @@ Y por ultimo añadimos la ISO de ***Ubuntu Server 16.04 LTS***
 
 Una vez llegados a este punto tenemos la maquina virtual preparada para poder intalar el sistema operativo.
 
-## Instalando Ubuntu Server 16.04 LTS 64bits
+## Instalando Ubuntu Server 16.04 LTS 64bits ##
 
 **Ubuntu Server** es una variante de Ubuntu que sale con cada versión y está dedicada especialmente para su uso en **servidores**. El uso de Ubuntu como servidor se ha extendido mucho en los últimos años, sobretodo para el uso de **servidores web**, de un modo tanto particular como profesional.
 
