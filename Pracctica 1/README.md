@@ -121,3 +121,11 @@ Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 # Acceder por ssh de una máquina a otra #
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img39.png)
+
+# Acceder mediante la herramienta curl desde una máquina a la otra #
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img40.png)
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img41.png)
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img42.png)
