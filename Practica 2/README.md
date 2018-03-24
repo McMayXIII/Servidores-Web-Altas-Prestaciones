@@ -51,6 +51,10 @@ En este punto, para trabajar podemos optar por hacerlo como root o como usuario 
 sudo chown pedro:pedro –R /var/www
 ~~~
 
+Insertamos el comando para que el usuario sea el dueño de la carpeta donde residen los archivos del espacio web y comprobamos que se hayan aplicado los cambios correctamente.
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img03.png)
+
 Para probar el funcionamiento del rsync vamos a clonar una carpeta cualquiera. Por ejemplo, para clonar la carpeta con el contenido del servidor web principal, en la máquina 2 (secundaria) ejecutaremos:
 
 ~~~
