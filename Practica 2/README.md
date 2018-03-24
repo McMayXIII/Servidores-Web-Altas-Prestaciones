@@ -22,6 +22,6 @@ tar czf - directorio | ssh equipodestino 'cat > ~/tar.tgz'
 
 Primero insertamos el comando mensionado anteriormente y luego comprobamos que se haya transmitido correctamente.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img01.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%202/image/img01.png)
 
 De esta forma en el equipo de destino tendremos creado el archivo tar.tgz Sin embargo, esto que puede ser útil en un momento dado, no nos servirá para sincronizar grandes cantidades de información. En ese caso, va mejor la herramienta rsync.
