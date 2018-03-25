@@ -179,6 +179,7 @@ Para ello, debemos editar el archivo /etc/crontab que normalmente tendrá un asp
 ~~~
   SHELL=/bin/bash
   PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
   01 * * * * root run-parts /etc/cron.hourly
   02 4 * * * root run-parts /etc/cron.daily
   22 4 * * 0 root run-parts /etc/cron.weekly
