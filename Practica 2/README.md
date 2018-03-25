@@ -51,7 +51,7 @@ En este punto, para trabajar podemos optar por hacerlo como root o como usuario 
 sudo chown pedro:pedro –R /var/www
 ~~~
 
-Como mis maquina tienen usuario con nombre distinto primero genero en la maquina swap1 el usuairo de la maquina 2.
+Como mis maquina tienen usuario con nombre distinto, en primer lugar genero en la maquina 1, el usuairo de la maquina 2 "swap2".
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img03.png)
 
@@ -65,11 +65,17 @@ Para probar el funcionamiento del rsync vamos a clonar una carpeta cualquiera. P
 rsync -avz -e ssh ipmaquina1:/var/www/ /var/www/
 ~~~
 
+Comprobamos el funcionamiento del rsync clonando el contenido del servidor web principal.
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img05.png)
+
 Nos pedirá la clave del usuario (pedro) en la máquina principal (máquina-1), y tras unos segundos, podremos comprobar que el directorio /var/www queda clonado de forma idéntica en ambas máquinas (de la máquina-1 se copia en la máquina-2):
 
 ~~~
 ls -la /var/www
 ~~~
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img06.png)
 
 Los directorios y ficheros copiados en la máquina destino mantienen los permisos y dueño que en la máquina origen.
 
