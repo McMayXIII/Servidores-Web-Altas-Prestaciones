@@ -51,9 +51,13 @@ En este punto, para trabajar podemos optar por hacerlo como root o como usuario 
 sudo chown pedro:pedro –R /var/www
 ~~~
 
-Insertamos el comando para que el usuario sea el dueño de la carpeta donde residen los archivos del espacio web y comprobamos que se hayan aplicado los cambios correctamente.
+Como mis maquina tienen usuario con nombre distinto primero genero en la maquina swap1 el usuairo de la maquina 2.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img03.png)
+
+Insertamos el comando para que el usuario sea el dueño de la carpeta donde residen los archivos del espacio web y comprobamos que se hayan aplicado los cambios correctamente.
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img04.png)
 
 Para probar el funcionamiento del rsync vamos a clonar una carpeta cualquiera. Por ejemplo, para clonar la carpeta con el contenido del servidor web principal, en la máquina 2 (secundaria) ejecutaremos:
 
@@ -70,10 +74,11 @@ ls -la /var/www
 Los directorios y ficheros copiados en la máquina destino mantienen los permisos y dueño que en la máquina origen.
 
 La herramienta rsync nos permite especificar qué directorios copiar y cuáles ignorar en el proceso de copia, de forma que no se sobreescriban los archivos que no queramos.
+
 Así, si hacemos:
 
 ~~~
-rsync -avz --delete --exclude=**/stats --exclude=**/error -- exclude=**/files/pictures -e ssh maquina1:/var/www/ /var/www/
+rsync -avz --delete --exclude=**/stats --exclude=**/error --exclude=**/files/pictures -e ssh maquina1:/var/www/ /var/www/
 ~~~
 
 estaremos haciendo la copia completa del directorio /var/www pero excluyendo /var/www/error , /var/www/stats y /var/www/files/pictures
