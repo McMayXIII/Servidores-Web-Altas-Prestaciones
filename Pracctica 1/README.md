@@ -100,31 +100,53 @@ Ahora procedemos a configurar la zona horaria, se despliegan diversas opciones s
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img23.png)
 
-Prodecemos a la configuración y particionado del disco.
+Prodecemos a la configuración y particionado del disco. En este caso utilizaremos el particionado guiado, utilizando el disco completo y configurando LVM.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img24.png)
 
+Tras esto seleccionamos el único disco disponible.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img25.png)
+
+Confirmamos y procedemos a configurar los volúmenes lógicos.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img26.png)
 
+Seleccionamos que queremos el tamaño máximo disponible, en este caso **21GB**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img27.png)
+
+Y finalizamos aceptando los cambios propuestos.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img28.png)
 
+A continuacion dejamos en blanco y pulsamos continuar para indicar que no queremos usar un servidor proxy.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img29.png)
+
+Seleccionamos que no deseamos actualizaciones automáticas.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img30.png)
 
+Ahora nos pregunta que paquetes deseamos instalar, en este caso requerimos de la instalación del servidor **LAMP** y el servidor **SSH**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img31.png)
+
+Tras continuar procedemos a configurar el servidor LAMP, primero establecemos la contraseña para el usuario root de MySQL y volvemos a introducirla para confirmarla.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img32.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img33.png)
 
+Âhora seleccionamos que queremos instalar el cargador de arranque GRUB en el disco duro.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img35.png)
 
+Por último confirmamos la instalación.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img36.png)
+
+Tras lo realizado anteriormente tenemos el servidor de Ubuntu instalado en la máquina virtual, realizamos lo mismo en otra máquina virtual, la cual se ha nombrado como **swap2**.
 
 ### Activando root ###
 
