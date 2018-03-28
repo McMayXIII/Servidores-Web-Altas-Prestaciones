@@ -56,11 +56,11 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img10.png)
 
-De las opciones disponible seleccionamos **Instalar Ubuntu Server**.
+De las opciones que nos muestra a continuación seleccionamos **Instalar Ubuntu Server**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img11.png)
 
-Se hecho lo anterior seleccionamos el país para establecer la zona horaria, en este caso **España**.
+ Continuamos seleccionando el país para establecer la zona horaria, en este caso **España**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img12.png)
 
@@ -78,19 +78,29 @@ Ahora procedemos a seleccionar la interfaz de red, en este caso **ens34**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img16.png)
 
+Seguidamente introducimos el nombre de la máquina, usuario y cuenta, en todos los casos será **swap1**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img17.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img18.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img19.png)
 
+Ahora establecemos la contraseña y confirmamos, como se observa en las siguientes figuras.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img20.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img21.png)
 
+Por último nos pregunta si queremos cifrar la carpeta personal, que en este caso no nos interesa, seleccionamos **NO**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img22.png)
 
+Ahora procedemos a configurar la zona horaria, se despliegan diversas opciones según el país elegido al inicio de la instalación, en este caso seleccionamos la opción **Peninsula**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img23.png)
+
+Prodecemos a la configuración y particionado del disco.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img24.png)
 
