@@ -154,6 +154,8 @@ Para ello insertamos el siguiente comando: ***su passwd root*** e insertamos la 
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img37.png)
 
+Podemos observar en la imagen anterior que se ha modificado correctamente la contraseña del usuario root en ambas máquinas virtuales.
+
 ### Comprobando estado de apache ###
 
 Para ello insertamos el siguiente comando: ***ps aux | grep apache***
@@ -162,12 +164,24 @@ Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 
 ## Acceder por ssh de una máquina a otra ##
 
+Para ello insertamos el siguiente comando: ***sh user@dir**
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img39.png)
+
+En la figura observamos que nos hemos logueado remotamente desde ambas máquinas.
 
 ## Acceder mediante la herramienta curl desde una máquina a la otra ##
 
+Primero procedemos ha instalar la aplicación mediante el comando: ***sudo apt-get install curl***
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img40.png)
+
+Seguidamente creamos un documento html **prueba.html** en ambas máquinas, con el texto que observamos a continuación.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img41.png)
 
+Ahora procedemos ha acceder a la página que acabamos de crear mediante la consola, con el comando: ***curl dirIP/prueba.html***
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img42.png)
+
+Y observamos que en ambas máquinas cargamos correctamente la página html de la máquina respectiva.
