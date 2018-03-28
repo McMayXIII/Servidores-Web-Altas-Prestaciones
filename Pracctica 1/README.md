@@ -164,7 +164,7 @@ Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 
 ## Acceder por ssh de una máquina a otra ##
 
-Para ello insertamos el siguiente comando: ***sh user@dir**
+Para ello insertamos el siguiente comando: ***sh user@dir***
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img39.png)
 
