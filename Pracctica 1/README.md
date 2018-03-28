@@ -56,9 +56,15 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img10.png)
 
+Una vez seleccionado el idioma elegimos la opción **Instalar Ubuntu Server**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img11.png)
 
+Tras elegir el idioma nos pregunta por la zona horaria, en este caso España.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img12.png)
+
+Ahora tenemos que elegir la distribución del teclado, elegiremos la selección manual que nos mostrará una lista de la cual seleccionaremos Spanish, el proceso lo podemos observar en las siguientes imágenes. 
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img13.png)
 
@@ -67,6 +73,8 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img15.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img16.png)
+
+Asdf.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img17.png)
 
