@@ -56,15 +56,25 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img10.png)
 
+De las opciones disponible seleccionamos **Instalar Ubuntu Server**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img11.png)
+
+Se hecho lo anterior seleccionamos el país para establecer la zona horaria, en este caso **España**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img12.png)
 
+Ahora procedemos a seleccionar la distribución del teclado, nos preguntará si deseamos detectarlo automáticamente, cliqueamos **NO**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img13.png)
+
+Seleccionamos **Spanish** >> **Spanish**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img14.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img15.png)
+
+Ahora procedemos a seleccionar la interfaz de red, en este caso **ens34**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img16.png)
 
