@@ -56,17 +56,29 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img10.png)
 
+De las opciones que nos muestra a continuación seleccionamos **Instalar Ubuntu Server**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img11.png)
+
+ Continuamos seleccionando el país para establecer la zona horaria, en este caso **España**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img12.png)
 
+Ahora procedemos a seleccionar la distribución del teclado, nos preguntará si deseamos detectarlo automáticamente, cliqueamos **NO**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img13.png)
+
+Seleccionamos **Spanish** >> **Spanish**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img14.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img15.png)
 
+Ahora procedemos a seleccionar la interfaz de red, en este caso **ens34**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img16.png)
+
+Seguidamente introducimos el nombre de la máquina, usuario y cuenta, en todos los casos será **swap1**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img17.png)
 
@@ -74,43 +86,75 @@ Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso sel
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img19.png)
 
+Ahora establecemos la contraseña y confirmamos, como se observa en las siguientes figuras.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img20.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img21.png)
 
+Por último nos pregunta si queremos cifrar la carpeta personal, que en este caso no nos interesa, seleccionamos **NO**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img22.png)
+
+Ahora procedemos a configurar la zona horaria, se despliegan diversas opciones según el país elegido al inicio de la instalación, en este caso seleccionamos la opción **Peninsula**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img23.png)
 
+Prodecemos a la configuración y particionado del disco. En este caso utilizaremos el particionado guiado, utilizando el disco completo y configurando LVM.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img24.png)
+
+Tras esto seleccionamos el único disco disponible.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img25.png)
 
+Confirmamos y procedemos a configurar los volúmenes lógicos.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img26.png)
+
+Seleccionamos que queremos el tamaño máximo disponible, en este caso **21GB**.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img27.png)
 
+Y finalizamos aceptando los cambios propuestos.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img28.png)
+
+A continuacion dejamos en blanco y pulsamos continuar para indicar que no queremos usar un servidor proxy.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img29.png)
 
+Seleccionamos que no deseamos actualizaciones automáticas.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img30.png)
 
+Ahora nos pregunta que paquetes deseamos instalar, en este caso requerimos de la instalación del servidor **LAMP** y el servidor **SSH**.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img31.png)
+
+Tras continuar procedemos a configurar el servidor LAMP, primero establecemos la contraseña para el usuario root de MySQL y volvemos a introducirla para confirmarla.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img32.png)
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img33.png)
 
+Âhora seleccionamos que queremos instalar el cargador de arranque GRUB en el disco duro.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img35.png)
 
+Por último confirmamos la instalación.
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img36.png)
+
+Tras lo realizado anteriormente tenemos el servidor de Ubuntu instalado en la máquina virtual, realizamos lo mismo en otra máquina virtual, la cual se ha nombrado como **swap2**.
 
 ### Activando root ###
 
 Para ello insertamos el siguiente comando: ***su passwd root*** e insertamos la contraseña.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img37.png)
+
+Podemos observar en la imagen anterior que se ha modificado correctamente la contraseña del usuario root en ambas máquinas virtuales.
 
 ### Comprobando estado de apache ###
 
@@ -120,12 +164,24 @@ Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 
 ## Acceder por ssh de una máquina a otra ##
 
+Para ello insertamos el siguiente comando: ***sh user@dir***
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img39.png)
+
+En la figura observamos que nos hemos logueado remotamente desde ambas máquinas.
 
 ## Acceder mediante la herramienta curl desde una máquina a la otra ##
 
+Primero procedemos ha instalar la aplicación mediante el comando: ***sudo apt-get install curl***
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img40.png)
+
+Seguidamente creamos un documento html **prueba.html** en ambas máquinas, con el texto que observamos a continuación.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img41.png)
 
+Ahora procedemos ha acceder a la página que acabamos de crear mediante la consola, con el comando: ***curl dirIP/prueba.html***
+
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Pracctica%201/image/img42.png)
+
+Y observamos que en ambas máquinas cargamos correctamente la página html de la máquina respectiva.
