@@ -171,7 +171,7 @@ En el caso que por algún motivo se perdiese la clave del ~/.ssh/authorized_keys
 
 Teniendo preparado el acceso por ssh sin contraseña, podemos hacer uso del rsync desde scripts que se ejecuten automáticamente con el cron (p.ej. cada noche de madrugada).
 
-En la siguiente figura se observa como nos conectamos sin problemas tras haber ejecutado el comando ***ssh-copy-id <ip_máquina>***, sin necesidad de especificar la contraseña.
+En la siguiente figura se observa como nos conectamos sin problemas tras haber ejecutado el comando **ssh-copy-id <ip_máquina>**, sin necesidad de especificar la contraseña.
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-2.png)
 
