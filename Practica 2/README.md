@@ -217,6 +217,11 @@ Según especifica el man de crontab no debemos editar el fichero crontab directa
 
 ![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-2.png)
 
-En el especificamos que se ejecute el script **prueba1.sh** cada minuto, el escript simplemente escribe la salida del comando **date** en un fichero llamado prueba.txt, en la siguiente imágen observamos que funciona correctamente:
+En el especificamos que se ejecute el script **prueba1.sh** cada minuto, el escript realiza una copia de sincronización utilizando la herramienta **sync** previamente instalada. El contenido del script es el siguiente:
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-3.png)
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-4.png)
+
+Y como podemos observar en la siguiente imágen se realiza correctamente la copia del directorio **/var/www** de la máquina 1 en el directorio **/var/www/www** de la máquina 2.
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-5.png)
+
