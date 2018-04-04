@@ -134,6 +134,10 @@ Según el tipo de claves a usar, se generan dos ficheros:
 
 La passphrase que nos pide es para añadir seguridad a la clave privada; se trata de una contraseña. En el caso de querer conectar a equipos sin contraseña debemos dejarla en blanco.
 
+A continuación mostramos el resultado de generar las claves en ambas máquinas:
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-1.png)
+
 A continuación deberemos copiar la clave pública al equipo remoto (máquina principal) añadiéndola al fichero ~/.ssh/authorized_keys, que deberá tener permisos 600 (por defecto esto estará bien configurado; sólo si nos da algún error debemos hacerlo):
 
 ~~~
@@ -166,6 +170,10 @@ Para ejecutar comandos simplemente deberemos añadirlo al final del comando ssh 
 En el caso que por algún motivo se perdiese la clave del ~/.ssh/authorized_keys nos pediría contraseña de nuevo.
 
 Teniendo preparado el acceso por ssh sin contraseña, podemos hacer uso del rsync desde scripts que se ejecuten automáticamente con el cron (p.ej. cada noche de madrugada).
+
+En la siguiente figura se observa como nos conectamos sin problemas tras haber ejecutado el comando $$$ssh-copy-id <ip_máquina>$$$, sin necesidad de especificar la contraseña.
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-2.png)
 
 ---
 
