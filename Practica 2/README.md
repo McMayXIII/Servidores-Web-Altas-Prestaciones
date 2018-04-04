@@ -212,3 +212,11 @@ No hay límites de cuantas tareas podemos tener. Lo importante es cuidar la sint
 - Comando: indica el comando que se desea ejecutar. Este campo puede contener múltiples palabras y espacios.
 
 Un asterisco * como valor en los primeros cinco campos indicará el valor "todo". Así, un * en el campo de minuto indicará todos los minutos de la hora.
+
+Según especifica el man de crontab no debemos editar el fichero crontab directamente, sino mediante el comando **crontab -e**, el fichero por defecto lo genera en **/var/spool/cron/crontabs/**. Haciendo uso del comando **crontab -l** listamos el contenido del fichero crontabs en uso, el cual lo observamos a continuación:
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-2.png)
+
+En el especificamos que se ejecute el script **prueba1.sh** cada minuto, el escript simplemente escribe la salida del comando **date** en un fichero llamado prueba.txt, en la siguiente imágen observamos que funciona correctamente:
+
+![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-3.png)
