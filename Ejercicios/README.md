@@ -22,12 +22,26 @@
 
 |Component  | 1 elemento | 2 elementos | 3 elementos |
 |----  | ----    | ---    | ----       |
-|Web  | 85 % | 97.75 % | 97.75 % + (1 - 97.75 %) x 85 % = **99.6625 %** |
-|Application  | 90 % | 99 % | 99 % + (1 - 99 %) x 90% = **99.9%** |
-|Database  | 99.9 % | 99.9999 % | 3 elementos |
-|DNS  | 98 % | 99.96 % | 3 elementos |
-|Firewall  | 85% | 97.75 % | 3 elementos |
-|Switch  | 99 % | 99.99 % | 3 elementos |
-|Data Center  | 99.99 % | 99.99% | 3 elementos |
-|ISP  | 95 % | 99.75 % | 3 elementos |
-| **Disponibilidad**  | 85 % x 90 % x 99.9 % x 98 % x 85 % x 99 % x 99.99 % x 95 % =  |     |   |
+|Web  | 85% | 97.75% | **99.6625%** |
+|Application  | 90% | 99% | **99.9%** |
+|Database  | 99.9% | 99.9999% | **99.9999999%** |
+|DNS  | 98% | 99.96% | **99.9992%** |
+|Firewall  | 85% | 97.75% | 3 elementos |
+|Switch  | 99% | 99.99% | 3 elementos |
+|Data Center  | 99.99% | 99.99% | 3 elementos |
+|ISP  | 95% | 99.75% | 3 elementos |
+| **Disponibilidad**  | **%** | **%** | **%** |
+
+***Calculo con 3 elementos***
+- **Web** = 97.75% + (1 - 97.75%) x 85% =  **99.6625%**
+- **Application** = 99% + (1 - 99%) x 90% =  **99.9%** 
+- **Database** = 99.9999% + (1 - 99.9999%) x 99.9% = **99.9999999%**
+- **DNS** = 99.96% + (1 - 99.96%) x 98% = **99.9992%**
+- **Firewall** = 97.75% + (1 - 97.75% ) x 85% = **
+- **Switch** = 99.99% + (1 - 99.99%) x 99%
+- **Data Center** = 99.99% + (1 - 99.99%) x 99.99%
+- **ISP** = 99.75% + (1 - 99.75%) x 95%
+
+***DISPONIBILIDAD***
+- **1 elemento** = 85% x 90% x 99.9% x 98% x 85% x 99% x 99.99% x 95%
+- **2 elementos** = 97.75% x 99% x 99.9999% x 99.96% x 97.75% x 99.99% x 99.99% x 99.75%
