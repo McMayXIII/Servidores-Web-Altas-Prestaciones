@@ -22,12 +22,12 @@
 
 |Component  | 1 elemento | 2 elementos | 3 elementos |
 |----  | ----    | ---    | ----       |
-|Web  | 85 % | 97.75 % | 97.75 % + (1 - 97.75 %) * 85 % = 99.6625 % |
-|Application  | 90 % | 99 % | 3 elementos |
+|Web  | 85 % | 97.75 % | 97.75 % + (1 - 97.75 %) x 85 % = **99.6625 %** |
+|Application  | 90 % | 99 % | 99 % + (1 - 99 %) x 90% = **99.9%** |
 |Database  | 99.9 % | 99.9999 % | 3 elementos |
 |DNS  | 98 % | 99.96 % | 3 elementos |
 |Firewall  | 85% | 97.75 % | 3 elementos |
 |Switch  | 99 % | 99.99 % | 3 elementos |
 |Data Center  | 99.99 % | 99.99% | 3 elementos |
 |ISP  | 95 % | 99.75 % | 3 elementos |
-|Total  |     |     |   |
+| **Disponibilidad**  | 85 % x 90 % x 99.9 % x 98 % x 85 % x 99 % x 99.99 % x 95 % =  |     |   |
