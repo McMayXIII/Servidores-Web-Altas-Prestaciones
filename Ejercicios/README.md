@@ -14,6 +14,8 @@
 
   - **Node.js:**  es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor (pero no limitándose a ello) basado en el lenguaje de programación ECMAScript, asíncrono, con I/O de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google. Fue creado con el enfoque de ser útil en la creación de programas de red altamente escalables, como por ejemplo, servidores web.​ Fue creado por Ryan Dahl en 2009 y su evolución está apadrinada por la empresa Joyent, que además tiene contratado a Dahl en plantilla
 
+#### Información obtenida de Wikipedia
+
 ---
 
 ## Ejercicios tema 2: ESCALABILIDAD Y DISPONIBILIDAD
@@ -46,3 +48,7 @@
 - **1 elemento** = 85% x 90% x 99.9% x 98% x 85% x 99% x 99.99% x 95% = **59.87%**
 - **2 elementos** = 97.75% x 99% x 99.9999% x 99.96% x 97.75% x 99.99% x 99.99% x 99.75% = **94.30%**
 - **3 elementos** = 99.6625% x 99.9% x 99.9999999% x 99.9992% x 99.6605% x 99.9999% x 99.999999% x 99.9875% = **99.21%**
+
+---
+
+**Ejercicio 2:** 
