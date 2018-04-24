@@ -12,7 +12,7 @@ Para esta práctica utilizaremos la herramienta **VMware Workstation** (se puede
 
 En primer lugar pulsamos sobre el icono ***Create a New Virtual Machine*** que se señala en la imagen.
 
-![img](https://github.com/f/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img01.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img01.png)
 
 Seleccionamos la intalación ***Typica***, a continuación seleccionamos la opción ***I will the operating system later. The virtual machine will be created with a blank hard disk*** (para insertar posteriormente la ISO de Ubuntu Server 16.04 LTS 64bits).
 
