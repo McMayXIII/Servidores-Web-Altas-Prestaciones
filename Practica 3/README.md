@@ -28,7 +28,7 @@ De todas estas opciones utilizaremos nginx configurado como proxy, y haproxy.
 
 Así pues, para esta práctica, debemos crear la siguiente organización de red:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img01.jpg)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img01.jpg)
 
 Como se puede ver, debemos tener en ejecución las máquinas servidoras finales (las que hicimos en la Práctica 2 y que ejecutan el servidor Apache).
 
