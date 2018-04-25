@@ -36,6 +36,8 @@ Además, crearemos una tercera máquina en la que no debe haber ningún software
 
 Una vez instalemos y configuremos el software de balanceo (nginx o haproxy), desde una máquina externa a la granja web (puede ser un terminal en el ordenador anfitrión o puede ser una cuarta máquina virtual) ejecutaremos la herramienta curl para hacer peticiones HTTP a la IP de la máquina balanceadora (como vimos en teoría, la VIP de nuestro sistema web).
 
+***
+
 ## 3. El servidor web nginx
 
 nginx (pronunciado en inglés “engine X”) es un servidor web ligero de alto rendimiento. Lo usan muchos sitios web conocidos, como: WordPress, Hulu, GitHub, Ohloh, SourceForge, TorrentReactor y partes de Facebook. La página principal (en español) está en http://wiki.nginx.org/NginxEs
@@ -172,62 +174,79 @@ fail_timeout = TIME
 
 Indica el tiempo en el que deben ocurrir "max_fails" intentos fallidos de conexión para considerar al servidor no operativo. Por defecto es 10 segundos.
 
+~~~~
 down
-marca el servidor como permanentemente offline (para ser usado con ip_hash).
+~~~~
+
+Marca el servidor como permanentemente offline (para ser usado con ip_hash).
+
+~~~~
 backup
-reserva este servidor y sólo le pasa tráfico si alguno de los otros servidores nobackup
-está caído u ocupado. No es compatible con la directiva ip_hash
+~~~~
+
+Reserva este servidor y sólo le pasa tráfico si alguno de los otros servidores nobackup está caído u ocupado. No es compatible con la directiva ip_hash
+
 Ejemplos:
+
+~~~~
 upstream backend {
-server maquina1 weight=5;
-server 127.0.0.1:8080 max_fails=3 fail_timeout=30s;
-server maquina3;
+  server maquina1 weight=5;
+  server 127.0.0.1:8080 max_fails=3 fail_timeout=30s;
+  server maquina3;
 }
-En este ejemplo, las peticiones se distribuyen mediante round-robin, pero lo hemos
-modificado de forma que de cada siete peticiones, cinco vayan a la maquina1 y otra a
-cada unas de las restantes máquinas del grupo (la segunda es el mismo balanceador
-pero con un servidor web adicional configurado en otro puerto). Además, si ocurre un
-error, la petición se pasará al siguiente servidor, hasta que se consiga servir o todos
-den error... También hemos establecido que el segundo servidor espere hasta tres
-intentos fallidos de conexión antes de dar por considerado ese servidor como no
-operativo, y esperará 30 segundos entre fallos.
-Si en la configuración con ip_hash necesitamos apagar uno de los servidores para
-hacer algún tipo de mantenimiento, debemos marcarlo con la opción down:
+~~~~
+
+En este ejemplo, las peticiones se distribuyen mediante round-robin, pero lo hemos modificado de forma que de cada siete peticiones, cinco vayan a la maquina1 y otra a cada unas de las restantes máquinas del grupo (la segunda es el mismo balanceador pero con un servidor web adicional configurado en otro puerto). Además, si ocurre un error, la petición se pasará al siguiente servidor, hasta que se consiga servir o todos den error... También hemos establecido que el segundo servidor espere hasta tres intentos fallidos de conexión antes de dar por considerado ese servidor como no operativo, y esperará 30 segundos entre fallos.
+
+Si en la configuración con ip_hash necesitamos apagar uno de los servidores para hacer algún tipo de mantenimiento, debemos marcarlo con la opción down:
+
+~~~~
 upstream backend {
-ip_hash;
-server maquina1;
-server maquina2;
-server maquina3 down;
-server maquina4;
+  ip_hash;
+  server maquina1;
+  server maquina2;
+  server maquina3 down;
+  server maquina4;
 }
-A continuación se ofrecen varias páginas de ayuda para profundizar en las
-posibilidades de configuración de nginx, ya sea como servidor web o como
-balanceador de carga:
-• http://www.cyberciti.biz/tips/using-nginx-as-reverse-proxy.html
-• http://nginx.org/en/docs/http/ngx_http_upstream_module.html
-4. Balanceo de carga con haproxy
-haproxy es un balanceador de carga y también proxy, de forma que puede balancear
-cualquier tipo de tráfico.
-Es un software muy adecuado para repartir carga y construir una infraestructura de
-altas prestaciones. Una configuración básica es sencilla de hacer. Posee muchas
-opciones para realizar cualquier tipo de balanceo y control de los servidores finales.
-Veamos cómo instalar y configurar haproxy para realizar funciones de balanceo de
-carga sencillas.
-4.1. Instalar haproxy
+~~~~
+
+A continuación se ofrecen varias páginas de ayuda para profundizar en las posibilidades de configuración de nginx, ya sea como servidor web o como balanceador de carga:
+
+
+- http://www.cyberciti.biz/tips/using-nginx-as-reverse-proxy.html
+- http://nginx.org/en/docs/http/ngx_http_upstream_module.html
+
+***
+
+## 4. Balanceo de carga con haproxy
+
+Haproxy es un balanceador de carga y también proxy, de forma que puede balancear cualquier tipo de tráfico.
+Es un software muy adecuado para repartir carga y construir una infraestructura de altas prestaciones. Una configuración básica es sencilla de hacer. Posee muchas opciones para realizar cualquier tipo de balanceo y control de los servidores finales.
+
+Veamos cómo instalar y configurar haproxy para realizar funciones de balanceo de carga sencillas.
+
+### 4.1. Instalar haproxy
+
 Tras instalar el sistema básico, sólo tenemos que usar apt-get para instalar haproxy:
+
+~~~~
 sudo apt-get install haproxy
-4.2. Configuración básica de haproxy como balanceador
-Una vez instalado, debemos modificar el archivo /etc/haproxy/haproxy.cfg ya que
-la configuración que trae por defecto no nos vale. Así pues, tras consultar cuál es la IP
-de la máquina balanceadora, y anotar las IP de las máquinas servidoras, editamos el
-fichero de configuración de haproxy:
+~~~~
+
+### 4.2. Configuración básica de haproxy como balanceador
+
+Una vez instalado, debemos modificar el archivo /etc/haproxy/haproxy.cfg ya que la configuración que trae por defecto no nos vale. Así pues, tras consultar cuál es la IP de la máquina balanceadora, y anotar las IP de las máquinas servidoras, editamos el fichero de configuración de haproxy:
+
+~~~~
 cd /etc/
 cd haproxy/
 ifconfig
 sudo nano haproxy.cfg
-Un balanceador sencillo debe escuchar tráfico en el puerto 80 y redirigirlo a alguna de
-las máquinas servidoras finales (debe conocer sus IP). Usemos como configuración
-inicial la siguiente:
+~~~~
+
+Un balanceador sencillo debe escuchar tráfico en el puerto 80 y redirigirlo a alguna de las máquinas servidoras finales (debe conocer sus IP). Usemos como configuración inicial la siguiente:
+
+~~~~
 global
 daemon
 maxconn 256
@@ -242,64 +261,63 @@ default_backend servers
 backend servers
 server m1 172.16.168.130:80 maxconn 32
 server m2 172.16.168.131:80 maxconn 32
-Vemos que nuestro balanceador espera conexiones entrantes por el puerto 80 para
-redirigirlas a las dos máquinas servidoras (en las que tenemos los Apache instalados y
-escuchando en el puerto 80).
-4.3. Comprobar el funcionamiento del balanceador
-Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy mediante
-el comando:
+~~~~
+
+Vemos que nuestro balanceador espera conexiones entrantes por el puerto 80 para redirigirlas a las dos máquinas servidoras (en las que tenemos los Apache instalados y escuchando en el puerto 80).
+
+### 4.3. Comprobar el funcionamiento del balanceador
+
+Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy mediante el comando:
+
+~~~~
 sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
-Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a hacer
-peticiones a la IP del balanceador (como hicimos en el caso del nginx). Por ejemplo,
-podemos usar el comando cURL de la siguiente forma:
+~~~~
+
+Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a hacer peticiones a la IP del balanceador (como hicimos en el caso del nginx). Por ejemplo, podemos usar el comando cURL de la siguiente forma:
+
+~~~~
 curl http://172.16.168.133
 curl http://172.16.168.133
-Debería mostrar la página de inicio de cada una de las máquinas, alternativamente, lo
-que querrá decir que está repartiendo las peticiones entre ambos.
-4.4. Resumen
-En esta sección hemos hecho una configuración muy básica de haproxy, pero
-completamente funcional. El programa posee muchas más opciones para realizar
-cualquier tipo de balanceo y control de los servidores finales. A continuación se
-ofrecen varias páginas de ayuda para profundizar en las posibilidades de
-configuración de haproxy:
-• http://code.google.com/p/haproxy-docs/
-• http://haproxy.1wt.eu/download/1.4/doc/configuration.txt
-5. Someter a una alta carga el servidor balanceado
-Para medir el rendimiento de un servidor necesitaremos una herramienta que ejecutar
-en los clientes para crear una carga HTTP específica (habitualmente alta). En algunos
-casos, las medidas se realizan con benchmarks como SPECweb o WebStone para
-simular un número determinado de clientes. Puesto que el número de usuarios de un
-servidor web puede ser del orden de los millones de usuarios, queda claro que simular
-un número pequeño de clientes no es realista. Por esta razón, debemos ser
-cuidadosos al elegir las herramientas a usar, y al ejecutarlas con los parámetros
-adecuados.
-Existen diversas herramientas para comprobar el rendimiento de servidores web. Las
-hay basadas en interfaz de línea de comandos y de interfaz gráfica. Entre las más
-utilizadas destacan:
-• Apache Benchmark
-• siege
-• httperf
-• OpenSTA
-• JMeter
-• openwebload
-• the grinder
-Con estas herramientas podemos analizar el rendimiento de servidores Apache,
-Internet Information Services (IIS), nginx, etc.
-Lo habitual es usar programas de línea de comandos que sobrecarguen lo mínimo
-posible las máquinas que estamos usando. En esta práctica usaremos la herramienta
-Apache Benchmark para comprobar el rendimiento de nuestra granja web recién
-configurada: http://httpd.apache.org/docs/2.2/programs/ab.html
-Es conveniente ejecutar los benchmark en otra máquina diferente a las que forman
-parte de la granja web (servidores web o balanceador), de forma que ambos procesos
-no consuman recursos de la misma máquina, ya que veríamos un menor rendimiento.
-Como se ha comentado, Apache Benchmark (ab) es una utilidad que se instala junto
-con el servidor Apache y permite comprobar el rendimiento de cualquier servidor web.
+~~~~
+
+Debería mostrar la página de inicio de cada una de las máquinas, alternativamente, lo que querrá decir que está repartiendo las peticiones entre ambos.
+
+### 4.4. Resumen
+
+En esta sección hemos hecho una configuración muy básica de haproxy, pero completamente funcional. El programa posee muchas más opciones para realizar cualquier tipo de balanceo y control de los servidores finales. A continuación se
+ofrecen varias páginas de ayuda para profundizar en las posibilidades de configuración de haproxy:
+
+- http://code.google.com/p/haproxy-docs/
+- http://haproxy.1wt.eu/download/1.4/doc/configuration.txt
+
+## 5. Someter a una alta carga el servidor balanceado
+
+Para medir el rendimiento de un servidor necesitaremos una herramienta que ejecutar en los clientes para crear una carga HTTP específica (habitualmente alta). En algunos casos, las medidas se realizan con benchmarks como SPECweb o WebStone para simular un número determinado de clientes. Puesto que el número de usuarios de un servidor web puede ser del orden de los millones de usuarios, queda claro que simular un número pequeño de clientes no es realista. Por esta razón, debemos ser cuidadosos al elegir las herramientas a usar, y al ejecutarlas con los parámetros adecuados.
+
+Existen diversas herramientas para comprobar el rendimiento de servidores web. Las hay basadas en interfaz de línea de comandos y de interfaz gráfica. Entre las más utilizadas destacan:
+
+- Apache Benchmark
+- siege
+- httperf
+- OpenSTA
+- JMeter
+- openwebload
+- the grinder
+
+Con estas herramientas podemos analizar el rendimiento de servidores Apache, Internet Information Services (IIS), nginx, etc.
+
+Lo habitual es usar programas de línea de comandos que sobrecarguen lo mínimo posible las máquinas que estamos usando. En esta práctica usaremos la herramienta Apache Benchmark para comprobar el rendimiento de nuestra granja web recién configurada: http://httpd.apache.org/docs/2.2/programs/ab.html
+
+Es conveniente ejecutar los benchmark en otra máquina diferente a las que forman parte de la granja web (servidores web o balanceador), de forma que ambos procesos no consuman recursos de la misma máquina, ya que veríamos un menor rendimiento.
+
+Como se ha comentado, Apache Benchmark (ab) es una utilidad que se instala junto con el servidor Apache y permite comprobar el rendimiento de cualquier servidor web.
+
 Para utilizarlo debemos entrar en un terminal y ejecutar el comando "ab" como sigue:
+
+~~~~
 ab -n 1000 -c 10 http://192.168.2.121/index.html
-Los parámetros indicados en la orden anterior le indican al benchmark que solicite la
-página con dirección http://192.168.2.121/index.html 1000 veces (-n 1000 indica el
-número de peticiones) y hacer esas peticiones concurrentemente de 10 en 10 (-c 10
-indica el nivel de concurrencia).
-ab no simula con total fidelidad el uso del sitio web que pueden hacer los usuarios
-habitualmente. En realidad pide el mismo recurso (misma página) repetidamente, pero
-para aplicar una carga alta a nuestra granja web será suficiente.
+~~~~
+
+Los parámetros indicados en la orden anterior le indican al benchmark que solicite la página con dirección http://192.168.2.121/index.html 1000 veces (-n 1000 indica el número de peticiones) y hacer esas peticiones concurrentemente de 10 en 10 (-c 10 indica el nivel de concurrencia).
+
+Teniendo en cuenta que ab, no simula con total fidelidad el uso del sitio web que pueden hacer los usuarios habitualmente. En realidad pide el mismo recurso (misma página) repetidamente, pero para aplicar una carga alta a nuestra granja web será suficiente.
