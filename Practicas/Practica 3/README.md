@@ -28,7 +28,7 @@ De todas estas opciones utilizaremos nginx configurado como proxy, y haproxy.
 
 Así pues, para esta práctica, debemos crear la siguiente organización de red:
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img01.jpg)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img01.jpg)
 
 Como se puede ver, debemos tener en ejecución las máquinas servidoras finales (las que hicimos en la Práctica 2 y que ejecutan el servidor Apache).
 
@@ -58,7 +58,10 @@ sudo systemctl start nginx
 
 ~~~
 
-Una vez instalado, podemos proceder a su configuración como balanceador de carga.
+Tras instalarlo e iniciarlo comprobamos que se esta ejecutando correctamente, como observamos en la siguiente figura:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img02.png)
+
 
 ### 3.2. Balanceo de carga usando nginx
 
@@ -112,6 +115,10 @@ curl http://172.16.168.132
 
 Debería mostrar la página de inicio de cada una de las máquinas, alternativamente, lo que querrá decir que está repartiendo las peticiones entre ambos Si al lanzarlo hemos obtenido un error o no está funcionando como balanceador, es posible que haya que eliminar la línea que configura ngnix como servidor web en el archivo /etc/nginx/nginx.conf (está hacia el final del archivo, y es suficiente con comentarla).
 
+Una vez realizado el proceso anterior comprobamos que funciona correctamente con el algoritmo round-robin, como se observa en la siguiente figura:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img03.png)
+
 Por otro lado, si sabemos que alguna de las máquinas finales es más potente, podemos modificar la definición del “upstream” para pasarle más tráfico que al resto de las del grupo. Para ello, tenemos un modificador llamado “weight”, al que le damos un valor numérico que indica la carga que le asignamos.
 
 Por defecto tiene el valor 1, por lo que si no modificamos ninguna máquina del grupo, todas recibirán la misma cantidad de carga:
@@ -125,6 +132,10 @@ upstream apaches {
 
 En el ejemplo anterior, la primera máquina la suponemos menos potente o más sobrecargada, así que le hemos asignado menos carga de trabajo que a la segunda (de cada tres peticiones que lleguen, la segunda máquina atiende dos y la primera atenderá una).
 
+Ahora comprobamos el funcinamiento con la máquina uno asignanda el doble de peso, en la siguiente figura observamos el comportamiento esperado:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img04.png)
+
 Esta configuración es muy útil, pero aún así nos interesará que todas las peticiones que vengan de la misma IP se dirijan a la misma máquina servidora final. Esto es así porque si el usuario está usando una aplicación web que mantiene algún tipo de estado durante la navegación, y el balanceador lo cambia a otra máquina servidora
 final, puede que reciba algún error.
 
@@ -137,6 +148,10 @@ upstream apaches {
   server 172.16.168.131;
 }
 ~~~~
+
+Con la directiva **ip_has** el balanceador nos redirige a la ultima máquina que nos sirvió, como observamos a continuación:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img05.png)
 
 La desventaja del balanceo ip_hash es que todos los usuarios detrás de un proxy o de un NAT serán dirigidos al mismo backend, lo que puede suponer que el balanceo no sea equilibrado. Para evitar esto, los balanceadores modernos permiten balancear usando una cookie, que sí que identifica a los usuarios finales.
 
@@ -265,6 +280,10 @@ server m2 172.16.168.131:80 maxconn 32
 
 Vemos que nuestro balanceador espera conexiones entrantes por el puerto 80 para redirigirlas a las dos máquinas servidoras (en las que tenemos los Apache instalados y escuchando en el puerto 80).
 
+La configuración resultante es la siguiente:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img07.png)
+
 ### 4.3. Comprobar el funcionamiento del balanceador
 
 Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy mediante el comando:
@@ -272,6 +291,10 @@ Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy me
 ~~~~
 sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
 ~~~~
+
+Tras iniciar el proceso observamos que esta ejecutandose:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img06.png)
 
 Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a hacer peticiones a la IP del balanceador (como hicimos en el caso del nginx). Por ejemplo, podemos usar el comando cURL de la siguiente forma:
 
@@ -281,6 +304,14 @@ curl http://172.16.168.133
 ~~~~
 
 Debería mostrar la página de inicio de cada una de las máquinas, alternativamente, lo que querrá decir que está repartiendo las peticiones entre ambos.
+
+Comprobamos que distribuye la carga como es esperado, como observamos en la siguiente figura:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img08.png)
+
+Ahora realizamos la prueba asignando a la máquina uno el doble de peso que la máquina 2, el resultado obtenido es el siguiente:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img09.png)
 
 ### 4.4. Resumen
 
@@ -321,3 +352,19 @@ ab -n 1000 -c 10 http://192.168.2.121/index.html
 Los parámetros indicados en la orden anterior le indican al benchmark que solicite la página con dirección http://192.168.2.121/index.html 1000 veces (-n 1000 indica el número de peticiones) y hacer esas peticiones concurrentemente de 10 en 10 (-c 10 indica el nivel de concurrencia).
 
 Teniendo en cuenta que ab, no simula con total fidelidad el uso del sitio web que pueden hacer los usuarios habitualmente. En realidad pide el mismo recurso (misma página) repetidamente, pero para aplicar una carga alta a nuestra granja web será suficiente.
+
+Estudiaremos el comportamiento en 4 casos, siendo el primero el expuesto anteriormente:
+
+~~~~
+ab -n 1000 -c 10 http://ip/prueba.html
+~~~~
+
+Donde los resultados obtenidos para el balanceador con enginx son:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img10.png)
+
+Y para la máquina con haproxy son:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img11.png)
+
+Podemos observar que el ratio de transferencia es mayor para la máquina con haproxy
