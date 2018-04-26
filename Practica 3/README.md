@@ -280,6 +280,10 @@ server m2 172.16.168.131:80 maxconn 32
 
 Vemos que nuestro balanceador espera conexiones entrantes por el puerto 80 para redirigirlas a las dos máquinas servidoras (en las que tenemos los Apache instalados y escuchando en el puerto 80).
 
+La configuración resultante es la siguiente:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img07.png)
+
 ### 4.3. Comprobar el funcionamiento del balanceador
 
 Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy mediante el comando:
@@ -287,6 +291,10 @@ Una vez salvada la configuración en el fichero, lanzamos el servicio haproxy me
 ~~~~
 sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
 ~~~~
+
+Tras iniciar el proceso observamos que esta ejecutandose:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img06.png)
 
 Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a hacer peticiones a la IP del balanceador (como hicimos en el caso del nginx). Por ejemplo, podemos usar el comando cURL de la siguiente forma:
 
@@ -296,6 +304,10 @@ curl http://172.16.168.133
 ~~~~
 
 Debería mostrar la página de inicio de cada una de las máquinas, alternativamente, lo que querrá decir que está repartiendo las peticiones entre ambos.
+
+Comprobamos que distribuye la carga como es esperado, como observamos en la siguiente figura:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img08.png)
 
 ### 4.4. Resumen
 
