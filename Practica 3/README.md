@@ -309,6 +309,10 @@ Comprobamos que distribuye la carga como es esperado, como observamos en la sigu
 
 ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img08.png)
 
+Ahora realizamos la prueba asignando a la máquina uno el doble de peso que la máquina 2, el resultado obtenido es el siguiente:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img09.png)
+
 ### 4.4. Resumen
 
 En esta sección hemos hecho una configuración muy básica de haproxy, pero completamente funcional. El programa posee muchas más opciones para realizar cualquier tipo de balanceo y control de los servidores finales. A continuación se
@@ -362,3 +366,5 @@ Donde los resultados obtenidos para el balanceador con enginx son:
 Y para la máquina con haproxy son:
 
 ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img11.png)
+
+Podemos observar que el ratio de transferencia es mayor para la máquina con haproxy
