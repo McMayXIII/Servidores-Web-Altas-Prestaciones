@@ -348,3 +348,17 @@ ab -n 1000 -c 10 http://192.168.2.121/index.html
 Los parámetros indicados en la orden anterior le indican al benchmark que solicite la página con dirección http://192.168.2.121/index.html 1000 veces (-n 1000 indica el número de peticiones) y hacer esas peticiones concurrentemente de 10 en 10 (-c 10 indica el nivel de concurrencia).
 
 Teniendo en cuenta que ab, no simula con total fidelidad el uso del sitio web que pueden hacer los usuarios habitualmente. En realidad pide el mismo recurso (misma página) repetidamente, pero para aplicar una carga alta a nuestra granja web será suficiente.
+
+Estudiaremos el comportamiento en 4 casos, siendo el primero el expuesto anteriormente:
+
+~~~~
+ab -n 1000 -c 10 http://ip/prueba.html
+~~~~
+
+Donde los resultados obtenidos para el balanceador con enginx son:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img10.png)
+
+Y para la máquina con haproxy son:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img11.png)
