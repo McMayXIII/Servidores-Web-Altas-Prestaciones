@@ -58,7 +58,10 @@ sudo systemctl start nginx
 
 ~~~
 
-Una vez instalado, podemos proceder a su configuración como balanceador de carga.
+Tras instalarlo e iniciarlo comprobamos que se esta ejecutando correctamente, como observamos en la siguiente figura:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img02.png)
+
 
 ### 3.2. Balanceo de carga usando nginx
 
@@ -111,6 +114,10 @@ curl http://172.16.168.132
 ~~~
 
 Debería mostrar la página de inicio de cada una de las máquinas, alternativamente, lo que querrá decir que está repartiendo las peticiones entre ambos Si al lanzarlo hemos obtenido un error o no está funcionando como balanceador, es posible que haya que eliminar la línea que configura ngnix como servidor web en el archivo /etc/nginx/nginx.conf (está hacia el final del archivo, y es suficiente con comentarla).
+
+Una vez realizado el proceso anterior comprobamos que funciona correctamente con el algoritmo round-robin, como se observa en la siguiente figura:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img03.png)
 
 Por otro lado, si sabemos que alguna de las máquinas finales es más potente, podemos modificar la definición del “upstream” para pasarle más tráfico que al resto de las del grupo. Para ello, tenemos un modificador llamado “weight”, al que le damos un valor numérico que indica la carga que le asignamos.
 
