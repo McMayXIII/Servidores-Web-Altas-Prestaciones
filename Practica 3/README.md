@@ -132,6 +132,10 @@ upstream apaches {
 
 En el ejemplo anterior, la primera máquina la suponemos menos potente o más sobrecargada, así que le hemos asignado menos carga de trabajo que a la segunda (de cada tres peticiones que lleguen, la segunda máquina atiende dos y la primera atenderá una).
 
+Ahora comprobamos el funcinamiento con la máquina uno asignanda el doble de peso, en la siguiente figura observamos el comportamiento esperado:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img04.png)
+
 Esta configuración es muy útil, pero aún así nos interesará que todas las peticiones que vengan de la misma IP se dirijan a la misma máquina servidora final. Esto es así porque si el usuario está usando una aplicación web que mantiene algún tipo de estado durante la navegación, y el balanceador lo cambia a otra máquina servidora
 final, puede que reciba algún error.
 
@@ -144,6 +148,10 @@ upstream apaches {
   server 172.16.168.131;
 }
 ~~~~
+
+Con la directiva **ip_has** el balanceador nos redirige a la ultima máquina que nos sirvió, como observamos a continuación:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img05.png)
 
 La desventaja del balanceo ip_hash es que todos los usuarios detrás de un proxy o de un NAT serán dirigidos al mismo backend, lo que puede suponer que el balanceo no sea equilibrado. Para evitar esto, los balanceadores modernos permiten balancear usando una cookie, que sí que identifica a los usuarios finales.
 
