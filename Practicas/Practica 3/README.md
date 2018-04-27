@@ -28,7 +28,7 @@ De todas estas opciones utilizaremos nginx configurado como proxy, y haproxy.
 
 Así pues, para esta práctica, debemos crear la siguiente organización de red:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img01.jpg)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img01.jpg)
 
 Como se puede ver, debemos tener en ejecución las máquinas servidoras finales (las que hicimos en la Práctica 2 y que ejecutan el servidor Apache).
 
@@ -60,7 +60,7 @@ sudo systemctl start nginx
 
 Tras instalarlo e iniciarlo comprobamos que se esta ejecutando correctamente, como observamos en la siguiente figura:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img02.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img02.png)
 
 
 ### 3.2. Balanceo de carga usando nginx
@@ -117,7 +117,7 @@ Debería mostrar la página de inicio de cada una de las máquinas, alternativam
 
 Una vez realizado el proceso anterior comprobamos que funciona correctamente con el algoritmo round-robin, como se observa en la siguiente figura:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img03.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img03.png)
 
 Por otro lado, si sabemos que alguna de las máquinas finales es más potente, podemos modificar la definición del “upstream” para pasarle más tráfico que al resto de las del grupo. Para ello, tenemos un modificador llamado “weight”, al que le damos un valor numérico que indica la carga que le asignamos.
 
@@ -134,7 +134,7 @@ En el ejemplo anterior, la primera máquina la suponemos menos potente o más so
 
 Ahora comprobamos el funcinamiento con la máquina uno asignanda el doble de peso, en la siguiente figura observamos el comportamiento esperado:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img04.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img04.png)
 
 Esta configuración es muy útil, pero aún así nos interesará que todas las peticiones que vengan de la misma IP se dirijan a la misma máquina servidora final. Esto es así porque si el usuario está usando una aplicación web que mantiene algún tipo de estado durante la navegación, y el balanceador lo cambia a otra máquina servidora
 final, puede que reciba algún error.
@@ -151,7 +151,7 @@ upstream apaches {
 
 Con la directiva **ip_has** el balanceador nos redirige a la ultima máquina que nos sirvió, como observamos a continuación:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img05.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img05.png)
 
 La desventaja del balanceo ip_hash es que todos los usuarios detrás de un proxy o de un NAT serán dirigidos al mismo backend, lo que puede suponer que el balanceo no sea equilibrado. Para evitar esto, los balanceadores modernos permiten balancear usando una cookie, que sí que identifica a los usuarios finales.
 
@@ -282,7 +282,7 @@ Vemos que nuestro balanceador espera conexiones entrantes por el puerto 80 para 
 
 La configuración resultante es la siguiente:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img07.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img07.png)
 
 ### 4.3. Comprobar el funcionamiento del balanceador
 
@@ -294,7 +294,7 @@ sudo /usr/sbin/haproxy -f /etc/haproxy/haproxy.cfg
 
 Tras iniciar el proceso observamos que esta ejecutandose:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img06.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img06.png)
 
 Si no nos sale ningún error o aviso, todo ha ido bien, y ya podemos comenzar a hacer peticiones a la IP del balanceador (como hicimos en el caso del nginx). Por ejemplo, podemos usar el comando cURL de la siguiente forma:
 
@@ -307,11 +307,11 @@ Debería mostrar la página de inicio de cada una de las máquinas, alternativam
 
 Comprobamos que distribuye la carga como es esperado, como observamos en la siguiente figura:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img08.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img08.png)
 
 Ahora realizamos la prueba asignando a la máquina uno el doble de peso que la máquina 2, el resultado obtenido es el siguiente:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img09.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img09.png)
 
 ### 4.4. Resumen
 
@@ -361,7 +361,7 @@ ab -n 10000 -c 20 http://ip/index.html
 
 Donde los resultados obtenidos son:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img12.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img12.png)
 
 A la izquierda tenemos los resultados para nginx y a la derecha para haproxy, podemos ver como el balanceador que hace uso de nginx se ha comportado ligeramente mejor, teniendo mayor tasa de transferencia por segundo y menor tiempo de respuesta.
 
@@ -373,7 +373,7 @@ ab -n 100000 -c 20 http://ip/index.html
 
 Donde los resultados obtenidos son:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img13.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img13.png)
 
 Observamos que al aumentar el número de peticiones el balanceador con haproxy mejora su comportamiento respecto al de nginx, obteniendo tiempos de repuesta menores y un mayor ratio de transferencia, además observamos que el servidor con nginx presenta menor estabilidad, la desviación estandar en los tiempos de conexión es considerablemente mayor respecto a la de haproxy.
 
@@ -385,6 +385,6 @@ ab -n 100000 -c 30 http://ip/index.html
 
 Donde los resultados obtenidos son:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img14.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%203/image/img14.png)
 
 En este último experimento el caso de haproxy no es confiable como se muestra en la captura, aún así, el rendimiento de ambos balanceadores se iguala al aumentar el grado de concurrencia, siendo ligeramente superior haproxy.
