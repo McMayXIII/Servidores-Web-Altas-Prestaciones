@@ -363,7 +363,7 @@ Donde los resultados obtenidos son:
 
 ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img12.png)
 
-A la izquierda tenemos los resultados para nginx y a la derecha para haproxy, podemos ver blab
+A la izquierda tenemos los resultados para nginx y a la derecha para haproxy, podemos ver como el balanceador que hace uso de nginx se ha comportado ligeramente mejor, teniendo mayor tasa de transferencia por segundo y menor tiempo de respuesta.
 
 Para el siguiente caso aumentaremos el número de peticiones:
 
@@ -375,7 +375,7 @@ Donde los resultados obtenidos son:
 
 ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img13.png)
 
-blablabla
+Observamos que al aumentar el número de peticiones el balanceador con haproxy mejora su comportamiento respecto al de nginx, obteniendo tiempos de repuesta menores y un mayor ratio de transferencia, además observamos que el servidor con nginx presenta menor estabilidad, la desviación estandar en los tiempos de conexión es considerablemente mayor respecto a la de haproxy.
 
 Y el ultimo caso aumentamos el número de concurrencia:
 
@@ -387,4 +387,4 @@ Donde los resultados obtenidos son:
 
 ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img14.png)
 
-blablabla
+En este último experimento el caso de haproxy no es confiable como se muestra en la captura, aún así, el rendimiento de ambos balanceadores se iguala al aumentar el grado de concurrencia, siendo ligeramente superior haproxy.
