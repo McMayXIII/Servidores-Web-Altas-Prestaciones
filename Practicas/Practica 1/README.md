@@ -12,31 +12,31 @@ Para esta práctica utilizaremos la herramienta **VMware Workstation** (se puede
 
 En primer lugar pulsamos sobre el icono ***Create a New Virtual Machine*** que se señala en la imagen.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img01.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img01.png)
 
 Seleccionamos la intalación ***Typica***, a continuación seleccionamos la opción ***I will the operating system later. The virtual machine will be created with a blank hard disk*** (para insertar posteriormente la ISO de Ubuntu Server 16.04 LTS 64bits).
 
- ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img02.png) ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img03.png)
+ ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img02.png) ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img03.png)
 
 En el siguiente paso seleccionmos el systema que vamos a usar ***LINUX*** y la version ***Ubuntu 64-bits*** y le asignamos un nombre.
 
- ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img04.png) ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img05.png)
+ ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img04.png) ![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img05.png)
 
 Ahora asignamos el tamaño del disco duro 20 GB, y seleccionamos la opción ***Split virtual disk into multiple files***.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img06.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img06.png)
 
 En este apartado pasaremos a la configuración de red, donde tendremos dos tarjetas una para conectar las maquinas virtuales internamente entre si. Que para este caso trendra el nombre de ***VMnet0***.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img07.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img07.png)
 
 Ahora configuramos la otra tarjeta de red para que la maquina se comunique con el exterior sin problemas.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img08.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img08.png)
 
 Y por ultimo añadimos la ISO de ***Ubuntu Server 16.04 LTS***
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img09.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img09.png)
 
 Una vez llegados a este punto tenemos la maquina virtual preparada para poder intalar el sistema operativo.
 
@@ -54,97 +54,97 @@ Es muy habitual encontrarnos Ubuntu Server como sistema operativo en muchos de l
 
 Pasos para instalar ubuntu, en primer lugar nos pide un idioma, en este caso seleccionamos **español**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img10.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img10.png)
 
 De las opciones que nos muestra a continuación seleccionamos **Instalar Ubuntu Server**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img11.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img11.png)
 
  Continuamos seleccionando el país para establecer la zona horaria, en este caso **España**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img12.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img12.png)
 
 Ahora procedemos a seleccionar la distribución del teclado, nos preguntará si deseamos detectarlo automáticamente, cliqueamos **NO**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img13.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img13.png)
 
 Seleccionamos **Spanish** >> **Spanish**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img14.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img14.png)
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img15.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img15.png)
 
 Ahora procedemos a seleccionar la interfaz de red, en este caso **ens34**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img16.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img16.png)
 
 Seguidamente introducimos el nombre de la máquina, usuario y cuenta, en todos los casos será **swap1**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img17.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img17.png)
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img18.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img18.png)
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img19.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img19.png)
 
 Ahora establecemos la contraseña y confirmamos, como se observa en las siguientes figuras.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img20.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img20.png)
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img21.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img21.png)
 
 Por último nos pregunta si queremos cifrar la carpeta personal, que en este caso no nos interesa, seleccionamos **NO**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img22.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img22.png)
 
 Ahora procedemos a configurar la zona horaria, se despliegan diversas opciones según el país elegido al inicio de la instalación, en este caso seleccionamos la opción **Peninsula**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img23.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img23.png)
 
 Prodecemos a la configuración y particionado del disco. En este caso utilizaremos el particionado guiado, utilizando el disco completo y configurando LVM.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img24.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img24.png)
 
 Tras esto seleccionamos el único disco disponible.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img25.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img25.png)
 
 Confirmamos y procedemos a configurar los volúmenes lógicos.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img26.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img26.png)
 
 Seleccionamos que queremos el tamaño máximo disponible, en este caso **21GB**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img27.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img27.png)
 
 Y finalizamos aceptando los cambios propuestos.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img28.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img28.png)
 
 A continuacion dejamos en blanco y pulsamos continuar para indicar que no queremos usar un servidor proxy.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img29.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img29.png)
 
 Seleccionamos que no deseamos actualizaciones automáticas.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img30.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img30.png)
 
 Ahora nos pregunta que paquetes deseamos instalar, en este caso requerimos de la instalación del servidor **LAMP** y el servidor **SSH**.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img31.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img31.png)
 
 Tras continuar procedemos a configurar el servidor LAMP, primero establecemos la contraseña para el usuario root de MySQL y volvemos a introducirla para confirmarla.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img32.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img32.png)
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img33.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img33.png)
 
 Âhora seleccionamos que queremos instalar el cargador de arranque GRUB en el disco duro.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img35.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img35.png)
 
 Por último confirmamos la instalación.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img36.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img36.png)
 
 Tras lo realizado anteriormente tenemos el servidor de Ubuntu instalado en la máquina virtual, realizamos lo mismo en otra máquina virtual, la cual se ha nombrado como **swap2**.
 
@@ -152,7 +152,7 @@ Tras lo realizado anteriormente tenemos el servidor de Ubuntu instalado en la m�
 
 Para ello insertamos el siguiente comando: ***su passwd root*** e insertamos la contraseña.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img37.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img37.png)
 
 Podemos observar en la imagen anterior que se ha modificado correctamente la contraseña del usuario root en ambas máquinas virtuales.
 
@@ -160,13 +160,13 @@ Podemos observar en la imagen anterior que se ha modificado correctamente la con
 
 Para ello insertamos el siguiente comando: ***ps aux | grep apache***
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img38.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img38.png)
 
 ## Acceder por ssh de una máquina a otra ##
 
 Para ello insertamos el siguiente comando: ***sh user@dir***
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img39.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img39.png)
 
 En la figura observamos que nos hemos logueado remotamente desde ambas máquinas.
 
@@ -174,14 +174,14 @@ En la figura observamos que nos hemos logueado remotamente desde ambas máquinas
 
 Primero procedemos ha instalar la aplicación mediante el comando: ***sudo apt-get install curl***
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img40.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img40.png)
 
 Seguidamente creamos un documento html **prueba.html** en ambas máquinas, con el texto que observamos a continuación.
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img41.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img41.png)
 
 Ahora procedemos ha acceder a la página que acabamos de crear mediante la consola, con el comando: ***curl dirIP/prueba.html***
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%201/image/img42.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%201/image/img42.png)
 
 Y observamos que en ambas máquinas cargamos correctamente la página html de la máquina respectiva.

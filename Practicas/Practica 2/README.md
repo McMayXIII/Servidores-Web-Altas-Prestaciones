@@ -24,7 +24,7 @@ Para ello, deberemos indicar al comando tar que queremos que use stdout como des
 
 Primero insertamos el comando mensionado anteriormente y luego comprobamos que se haya transmitido correctamente.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img01.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img01.png)
 
 De esta forma en el equipo de destino tendremos creado el archivo tar.tgz Sin embargo, esto que puede ser útil en un momento dado, no nos servirá para sincronizar grandes cantidades de información. En ese caso, va mejor la herramienta rsync.
 
@@ -43,7 +43,7 @@ En nuestras máquinas Ubuntu podemos instalarlo (si no lo está) usando apt-get:
 
 Como podemos ver en la imagen la herramienta rsync ya venía instalada de serie.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img02.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img02.png)
 
 En este punto, para trabajar podemos optar por hacerlo como root o como usuario sin privilegios de root (el usuario habitual). En principio, podremos realizar todas las configuraciones como usuario sin privilegios por lo que se recomienda usar esta cuenta. En este caso, y como detalle previo, es hacer que el usuario sea el dueño de la carpeta donde residen los archivos que hay en el espacio web (en ambas máquinas):
 
@@ -53,11 +53,11 @@ En este punto, para trabajar podemos optar por hacerlo como root o como usuario 
 
 Como mis maquina tienen usuario con nombre distinto, en primer lugar genero en la maquina 1, el usuairo de la maquina 2 "swap2".
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img03.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img03.png)
 
 Insertamos el comando para que el usuario sea el dueño de la carpeta donde residen los archivos del espacio web y comprobamos que se hayan aplicado los cambios correctamente.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img04.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img04.png)
 
 Para probar el funcionamiento del rsync vamos a clonar una carpeta cualquiera. Por ejemplo, para clonar la carpeta con el contenido del servidor web principal, en la máquina 2 (secundaria) ejecutaremos:
 
@@ -67,7 +67,7 @@ Para probar el funcionamiento del rsync vamos a clonar una carpeta cualquiera. P
 
 Comprobamos el funcionamiento del rsync clonando el contenido del servidor web principal.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img05.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img05.png)
 
 Nos pedirá la clave del usuario (pedro) en la máquina principal (máquina-1), y tras unos segundos, podremos comprobar que el directorio /var/www queda clonado de forma idéntica en ambas máquinas (de la máquina-1 se copia en la máquina-2):
 
@@ -75,7 +75,7 @@ Nos pedirá la clave del usuario (pedro) en la máquina principal (máquina-1), 
   ls -la /var/www
 ~~~
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img06.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/img06.png)
 
 Los directorios y ficheros copiados en la máquina destino mantienen los permisos y dueño que en la máquina origen.
 
@@ -136,7 +136,7 @@ La passphrase que nos pide es para añadir seguridad a la clave privada; se trat
 
 A continuación mostramos el resultado de generar las claves en ambas máquinas:
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-1.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-1.png)
 
 A continuación deberemos copiar la clave pública al equipo remoto (máquina principal) añadiéndola al fichero ~/.ssh/authorized_keys, que deberá tener permisos 600 (por defecto esto estará bien configurado; sólo si nos da algún error debemos hacerlo):
 
@@ -173,7 +173,7 @@ Teniendo preparado el acceso por ssh sin contraseña, podemos hacer uso del rsyn
 
 En la siguiente figura se observa como nos conectamos sin problemas tras haber ejecutado el comando **ssh-copy-id <ip_máquina>**, sin necesidad de especificar la contraseña.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-2.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer4-2.png)
 
 ---
 
@@ -215,13 +215,12 @@ Un asterisco * como valor en los primeros cinco campos indicará el valor "todo"
 
 Según especifica el man de crontab no debemos editar el fichero crontab directamente, sino mediante el comando **crontab -e**, el fichero por defecto lo genera en **/var/spool/cron/crontabs/**. Haciendo uso del comando **crontab -l** listamos el contenido del fichero crontabs en uso, el cual lo observamos a continuación:
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-2.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-2.png)
 
 En el especificamos que se ejecute el script **prueba1.sh** cada minuto, el escript realiza una copia de sincronización utilizando la herramienta **sync** previamente instalada. El contenido del script es el siguiente:
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-4.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-4.png)
 
 Y como podemos observar en la siguiente imágen se realiza correctamente la copia del directorio **/var/www** de la máquina 1 en el directorio **/var/www/www** de la máquina 2.
 
-![img](https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-5.png)
-
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%202/image/prac2-ejer5-5.png)
