@@ -353,18 +353,38 @@ Los parámetros indicados en la orden anterior le indican al benchmark que solic
 
 Teniendo en cuenta que ab, no simula con total fidelidad el uso del sitio web que pueden hacer los usuarios habitualmente. En realidad pide el mismo recurso (misma página) repetidamente, pero para aplicar una carga alta a nuestra granja web será suficiente.
 
-Estudiaremos el comportamiento en 4 casos, siendo el primero el expuesto anteriormente:
+Estudiaremos el comportamiento en 3 casos, siendo el primero :
 
 ~~~~
-ab -n 1000 -c 10 http://ip/prueba.html
+ab -n 10000 -c 20 http://ip/index.html
 ~~~~
 
-Donde los resultados obtenidos para el balanceador con enginx son:
+Donde los resultados obtenidos son:
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img10.png)
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img12.png)
 
-Y para la máquina con haproxy son:
+A la izquierda tenemos los resultados para nginx y a la derecha para haproxy, podemos ver blab
 
-![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img11.png)
+Para el siguiente caso aumentaremos el número de peticiones:
 
-Podemos observar que el ratio de transferencia es mayor para la máquina con haproxy
+~~~~
+ab -n 100000 -c 20 http://ip/index.html
+~~~~
+
+Donde los resultados obtenidos son:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img13.png)
+
+blablabla
+
+Y el ultimo caso aumentamos el número de concurrencia:
+
+~~~~
+ab -n 100000 -c 30 http://ip/index.html
+~~~~
+
+Donde los resultados obtenidos son:
+
+![img](https://github.com/JavierBejMen/Servidores-Web-Altas-Prestaciones/blob/master/Practica%203/image/img14.png)
+
+blablabla
