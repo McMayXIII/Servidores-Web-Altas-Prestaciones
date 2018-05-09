@@ -1,6 +1,6 @@
 # Práctica 4. Asegurar la granja web #
 
-## 2. Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
+## Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS
 
 Un **certificado SSL** sirve para brindar seguridad al visitante de su página web, una
 manera de decirles a sus clientes que el sitio es auténtico, real y confiable para
@@ -31,12 +31,68 @@ certificados en la configuración. Así pues, como root ejecutaremos:
 ~~~~
 a2enmod ssl
 ~~~~
+
 ![img](image/img01.png)
 
 ~~~~
 service apache2 restart
+~~~~
+
+![img](image/img02.png)
+
+Comprobamos su estado para verificar que todo este bien.
+
+~~~~
 mkdir /etc/apache2/ssl
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
 ~~~~
 
-Nos pedirá una serie de datos para configurar el dominio.
+**Nos pedirá una serie de datos para configurar el dominio.**
+- 1. Generamos la carpeta que contendra los fichero SSL
+- 2. Insertamos el comando para generar el fichero de configuracion de dominio.
+
+![img](image/img03.png)
+
+**Editamos el archivo de configuración del sitio default-ssl:**
+
+~~~~
+nano /etc/apache2/sites-available/default-ssl.conf
+~~~~
+
+Y agregamos estas lineas debajo de donde pone SSLEngine on:
+
+![img](image/img04.png)
+
+**Activamos el sitio default--ssl y reiniciamos apache:**
+
+~~~~
+a2ensite default-ssl
+~~~~
+
+![img](image/img05.png)
+
+~~~~
+service apache2 reload
+~~~~
+
+![img](image/img06.png)
+
+Una vez reiniciado Apache, accedemos al servidor web mediante el protocolo HTTPS y veremos, si estamos accediendo con un navegador web, que en la barra de dirección sale en rojo el https, ya que se trata de un certificado autofirmado.
+
+**Para hacer peticiones por HTTPS utilizando la herramienta curl, ejecutaremos:**
+
+~~~~
+curl –k https://ipmaquina1/index.html
+~~~~
+
+![img](image/img07.png)
+
+---
+
+## Configuración del cortafuegos
+
+Un cortafuegos es un componente esencial que protege la granja web de accesos indebidos. Son dispositivos colocados entre subredes para realizar diferentes tareas de manejo de paquetes. Actúa como el guardián de la puerta al sistema web, permitiendo el tráfico autorizado y denegando el resto.
+
+En general, todos los paquetes TCP/IP que entren o salgan de la granja web deben pasar por el cortafuegos, que debe examinar y bloquear aquellos que no cumplan los criterios de seguridad establecidos. Estos criterios se configuran mediante un conjunto de reglas, usadas para bloquear puertos específicos, rangos de puertos, direcciones IP, rangos de IP, tráfico TCP o tráfico UDP.
+
+### Configuración del cortafuegos iptables en Linux
