@@ -31,7 +31,7 @@ certificados en la configuración. Así pues, como root ejecutaremos:
 ~~~~
 a2enmod ssl
 ~~~~
-![https://github.com/McMayXIII/Servidores-Web-Altas-Prestaciones/blob/master/Practicas/Practica%204/image/img01.png]()
+![img](image/img01.png)
 
 ~~~~
 service apache2 restart
