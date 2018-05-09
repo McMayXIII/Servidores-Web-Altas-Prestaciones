@@ -30,6 +30,10 @@ certificados en la configuración. Así pues, como root ejecutaremos:
 
 ~~~~
 a2enmod ssl
+~~~~
+![image\img01.png]()
+
+~~~~
 service apache2 restart
 mkdir /etc/apache2/ssl
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
