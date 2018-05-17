@@ -96,3 +96,11 @@ Un cortafuegos es un componente esencial que protege la granja web de accesos in
 En general, todos los paquetes TCP/IP que entren o salgan de la granja web deben pasar por el cortafuegos, que debe examinar y bloquear aquellos que no cumplan los criterios de seguridad establecidos. Estos criterios se configuran mediante un conjunto de reglas, usadas para bloquear puertos específicos, rangos de puertos, direcciones IP, rangos de IP, tráfico TCP o tráfico UDP.
 
 ### Configuración del cortafuegos iptables en Linux
+
+Seleccionando entre todas las opciones disponibles en el pdf, desarrollamos el siguiente script.
+
+![img](image/img08.png)
+
+Y para que se ejecute cada vez que se inicia el pc, insertamos los siguietes comandos.
+
+![img](image/img09.png)
