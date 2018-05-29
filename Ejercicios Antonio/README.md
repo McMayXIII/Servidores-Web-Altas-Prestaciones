@@ -288,7 +288,7 @@ Exportaremos los directorios desde el fichero /etc/exports
 
 una vez exportados editaremos dicho fichero añadiendole las siguientes sentencias:
 
-    /var/nfs        192.168.64.128(rw,sync,no_subtree_check)
+    /var/nfs 10.0.2.10(rw,sync,no_subtree_check)
 
 Una vez hemos editado el fichero le aplicamos la configuración con el comando:
 
@@ -301,6 +301,6 @@ Una vez aquí pasaremos a la máquina que hará de cliente e instalamos el clien
 Montamoremos el directorio ejecutando las siguientes ordenes:
 
     mkdir -p /mnt/nfs/var/nfs
-    mount 192.168.64.128:/var/nfs /mnt/nfs/var/nfs
-
+    mount 10.0.2.10:/var/nfs /mnt/nfs/var/nfs
+    
 Para comprobar su funcionamiento tal simple como crear un fichero en el servidor y en el directorio montado en el NFS cliente debe aparecernos si realizamos un ls en el directorio.
