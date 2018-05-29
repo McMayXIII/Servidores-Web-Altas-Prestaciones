@@ -192,7 +192,7 @@ Munin es un programa que permite monitorizar uno o varios equipos. Además, pres
 - **AWStats:**
 es una herramienta open source de informes de análisis web, apta para analizar datos de servicios de Internet como un servidor web, streaming, mail y FTP. AWstats analiza los archivos de log del servidor, y basándose en ellos produce informes HTML. Los datos son presentados visualmente en informes de tablas y gráficos de barra. Pueden crearse informes estáticos mediante una interfaz de línea de comando, y se pueden obtener informes on-demand a través de un navegador web, gracias a un programa CGI.
 
-Soporta la mayoría de los formatos de archivos log de servidor web conocidos, entre ellos Apache (formato de log NCSA combinado/XLF/ELF o formato común/CLFt), WebStar, IIS (formato de log del W3C) y muchos otros formatos comunes de Internet.
+  Soporta la mayoría de los formatos de archivos log de servidor web conocidos, entre ellos Apache (formato de log NCSA combinado/XLF/ELF o formato común/CLFt), WebStar, IIS (formato de log del W3C) y muchos otros formatos comunes de Internet.
 
 - **Ganglia:**
 es un sistema de monitorización de computadores de alto rendimiento como clusters o servidores alojados en granjas web. Gracias a sus algoritmos consume bastante poco por nodo y utiliza una alta concurrencia a la hora de obtener toda la información tanto a nivel de servicios como hardware de nuestros servidores.
