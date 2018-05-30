@@ -182,13 +182,13 @@ Las principales características y ventajas que nos ofrecen los sistemas basados
 
 - De esta forma, se evita poner a las máquinas nombres como “honeypot” o “attackme”; muchas veces ni tan siquiera están dadas de altas en los DNS. Su objetivo es pasar desapercibidas en una red como una máquina más.
 
-- Como todo sistema tiene también unas contrapartidas o desventajas asociadas. En el caso de los Honeypots los principales inconvenientes son:
+Como todo sistema tiene también unas contrapartidas o desventajas asociadas. En el caso de los Honeypots los principales inconvenientes son:
 
-  - Son elementos totalmente pasivos. De esta forma, si no reciben ningún ataque no sirven de nada.
+- Son elementos totalmente pasivos. De esta forma, si no reciben ningún ataque no sirven de nada.
 
-  - Son fuentes potenciales de riesgo para nuestra red. Debido a la atracción que ejercen sobre posibles atacantes, si no calibramos perfectamente el alcance del Honeypot y lo convertimos en un entorno controlado y cerrado, puede ser utilizado como fuente de ataques a otras redes o incluso a la nuestra propia.
+- Son fuentes potenciales de riesgo para nuestra red. Debido a la atracción que ejercen sobre posibles atacantes, si no calibramos perfectamente el alcance del Honeypot y lo convertimos en un entorno controlado y cerrado, puede ser utilizado como fuente de ataques a otras redes o incluso a la nuestra propia.
 
-  - Consumen una dirección IP como mínimo. De todas formas, este inconveniente es mínimo, ya que lo ideal es asignar direcciones IP del rango de direcciones libres.
+- Consumen una dirección IP como mínimo. De todas formas, este inconveniente es mínimo, ya que lo ideal es asignar direcciones IP del rango de direcciones libres.
 
 ## Conclusión de los Honeypots.
 
