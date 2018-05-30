@@ -174,15 +174,15 @@ Las principales características y ventajas que nos ofrecen los sistemas basados
 
 - Generan un volumen pequeño de datos, que al contrario de los sistemas clásicos de seguridad (Firewalls, IDS…), generan cientos de megas de ficheros de logs con todo tipo de información no necesaria, que para el caso de los Honeypots estos generan muy pocos datos y de altísimo valor.
 
-  Los Honeypots son ordenadores que ningún usuario o sistema normal debe acceder a ellos. Permitiendo de esta forma, relevar cualquier acceso, atacante o una configuración errónea de un sistema, sin existir falsos positivos.
+- Los Honeypots son ordenadores que ningún usuario o sistema normal debe acceder a ellos. Permitiendo de esta forma, relevar cualquier acceso, atacante o una configuración errónea de un sistema, sin existir falsos positivos.
 
-  Se necesita recursos mínimos, ya que a diferencia de otros sistemas de seguridad, las necesidades de un Honeypot son mínimas. No consume ni ancho de banda ni memoria o CPU extra. No necesita complejas arquitecturas o varios ordenadores centralizados, cualquier ordenador conectado a la red puede realizar este trabajo.
+- Se necesita recursos mínimos, ya que a diferencia de otros sistemas de seguridad, las necesidades de un Honeypot son mínimas. No consume ni ancho de banda ni memoria o CPU extra. No necesita complejas arquitecturas o varios ordenadores centralizados, cualquier ordenador conectado a la red puede realizar este trabajo.
 
 - Este tipo de sistemas sirven tanto para posibles atacantes internos como externos.
 
-  De esta forma, se evita poner a las máquinas nombres como “honeypot” o “attackme”; muchas veces ni tan siquiera están dadas de altas en los DNS. Su objetivo es pasar desapercibidas en una red como una máquina más.
+- De esta forma, se evita poner a las máquinas nombres como “honeypot” o “attackme”; muchas veces ni tan siquiera están dadas de altas en los DNS. Su objetivo es pasar desapercibidas en una red como una máquina más.
 
-  Como todo sistema tiene también unas contrapartidas o desventajas asociadas. En el caso de los Honeypots los principales inconvenientes son:
+- Como todo sistema tiene también unas contrapartidas o desventajas asociadas. En el caso de los Honeypots los principales inconvenientes son:
 
   - Son elementos totalmente pasivos. De esta forma, si no reciben ningún ataque no sirven de nada.
 
