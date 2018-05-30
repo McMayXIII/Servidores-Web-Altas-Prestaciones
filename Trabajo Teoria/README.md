@@ -62,7 +62,7 @@ Los Honeypots se pueden clasificar de acuerdo a dos criterios: Según su Ambient
 
 ### Según su Ambiente de Implementación.
 
-Bajo esta categoría podemos definir dos tipos de Honeypots: Para la Producción y para la Investigación.
+Bajo esta categoría podemos definir dos tipos de Honeypots:
 
 #### Honeypots para la Producción.
 
@@ -95,7 +95,7 @@ Las ventajas de dicha solución son dos:
 
 - Los Honeypots de Alta Interacción no asumen nada acerca del posible comportamiento que tendrá el atacante, proveyendo un entorno abierto que captura todas las actividades realizadas y que ofrece una amplia gama de servicios, aplicaciones y depósitos de información que pueden servir como blanco potencial para aquellos servicios que específicamente deseamos comprometer. Esto permite a las soluciones de alta interacción conocer comportamientos no esperados. Sin embargo, esta última capacidad también incrementa el riesgo de que los atacantes puedan utilizar estos sistemas operativos reales para lanzar ataques a sistemas internos que no forman parte de los Honeypots, convirtiendo una carnada en un arma.
 
-En consecuencia, se requiere la implementación de una tecnología adicional que prevenga al atacante el dañar otros sistemas que no son Honeypots o que prive al sistema comprometido de sus capacidades de convertirse en una plataforma de lanzamiento de ataques. Hoy por hoy, el mejor ejemplo de un Honeypot de alta interacción está representado en las Honeynets.
+  En consecuencia, se requiere la implementación de una tecnología adicional que prevenga al atacante el dañar otros sistemas que no son Honeypots o que prive al sistema comprometido de sus capacidades de convertirse en una plataforma de lanzamiento de ataques. Hoy por hoy, el mejor ejemplo de un Honeypot de alta interacción está representado en las Honeynets.
 
 ## Ubicación de los Honeypots
 
@@ -176,10 +176,7 @@ Las principales características y ventajas que nos ofrecen los sistemas basados
 
   Los Honeypots son ordenadores que ningún usuario o sistema normal debe acceder a ellos. Permitiendo de esta forma, relevar cualquier acceso, atacante o una configuración errónea de un sistema, sin existir falsos positivos.
 
- Se necesita recursos mínimos, ya que a diferencia de otros sistemas de seguridad,
-las necesidades de un Honeypot son mínimas. No consume ni ancho de banda ni
-memoria o CPU extra. No necesita complejas arquitecturas o varios ordenadores
-centralizados, cualquier ordenador conectado a la red puede realizar este trabajo.
+  Se necesita recursos mínimos, ya que a diferencia de otros sistemas de seguridad, las necesidades de un Honeypot son mínimas. No consume ni ancho de banda ni memoria o CPU extra. No necesita complejas arquitecturas o varios ordenadores centralizados, cualquier ordenador conectado a la red puede realizar este trabajo.
 
 - Este tipo de sistemas sirven tanto para posibles atacantes internos como externos.
 
