@@ -29,29 +29,26 @@ Los Honeypots son en su forma más básica son servidores de información falsos
 Por último, el servidor es habilitado con herramientas de monitoreo y rastreo de información, de manera que cada paso y rastro de actividad de un “hacker” pueda ser registrado en una bitácora que indique esos movimientos de manera detallada.
 
 Las funciones principales de un Honeypot son:
-- Desviar la atención del atacante de la red real del sistema, de manera que no se comprometan los recursos principales de información.
-- Capturar nuevos virus o gusanos para su estudio posterior.
-- Formar perfiles de atacantes y sus métodos de ataque preferidos, de manera similar a la usada por una corporación policiaca para construir el archivo de un
-criminal basado en su modus operandi.
-- Conocer nuevas vulnerabilidades y riesgos de los distintos sistemas operativos, entornos y programas las cuales aún no se encuentren debidamente documentadas.
+- **Desviar** la atención del atacante de la red real del sistema, de manera que no se comprometan los recursos principales de información.
+- **Capturar** nuevos virus o gusanos para su estudio posterior.
+- **Formar** perfiles de atacantes y sus métodos de ataque preferidos, de manera similar a la usada por una corporación policiaca para construir el archivo de un criminal basado en su modus operandi.
+- **Conocer** nuevas vulnerabilidades y riesgos de los distintos sistemas operativos, entornos y programas las cuales aún no se encuentren debidamente documentadas.
 
 En un contexto más avanzado, un conjunto de Honeypots forma una Honeynet, proporcionando así una herramienta que abarca un conjunto extendido de posibles amenazas y proporciona al administrador de sistemas mayor información para su estudio.
 
-Inclusive, hace más fascinante el ataque para intruso debido a que se incrementan las posibilidades, blancos y métodos de ataque. Los veremos más adelante.
+Inclusive, hace más fascinante el ataque para intruso debido a que se incrementan las posibilidades, blancos y métodos de ataque.
 
 ### Prevención de ataques.
 
 Los Honeypots nos pueden proteger de diferentes tipo de amenaces entre las que podemos encontrar:
 
-- Defensa contra ataques automatizados: Estos ataques son basados en herramientas que aleatoriamente rastrean redes enteras buscando sistemas vulnerables. Si un sistema vulnerable es encontrado, estas herramientas automatizadas atacaran y tomaran el sistema (con gusanos que se replican en la víctima). Uno de las métodos para proteger de tales ataques es bajando la velocidad de su rastreo para después detenerlos. Llamados “Sticky Honeypots”, estas soluciones monitorean el espacio IP no utilizado. Cuando los sistemas son analizados, estos Honeypots interactúan con él y disminuyen la velocidad del ataque.
+- **Defensa contra ataques automatizados:** Estos ataques son basados en herramientas que aleatoriamente rastrean redes enteras buscando sistemas vulnerables. Si un sistema vulnerable es encontrado, estas herramientas automatizadas atacaran y tomaran el sistema (con gusanos que se replican en la víctima). Uno de las métodos para proteger de tales ataques es bajando la velocidad de su rastreo para después detenerlos. Llamados “Sticky Honeypots”, estas soluciones monitorean el espacio IP no utilizado. Cuando los sistemas son analizados, estos Honeypots interactúan con él y disminuyen la velocidad del ataque.
 
-- Protección contra intrusos humanos: Este concepto se conoce como engaño o disuasión. La idea de esta técnica es confundir al atacante y hacerle perder tiempo y recursos mientras interactúa con el Honeypot. Mientras ese proceso se lleva a cabo, se puede detectar la actividad del atacante y se tiene tiempo para reaccionar y detener el ataque. Además podremos mantener un estudio de como un atacante humano se mueve y pretende infiltrarse en nuestro sistema.
+- **Protección contra intrusos humanos:** Este concepto se conoce como engaño o disuasión. La idea de esta técnica es confundir al atacante y hacerle perder tiempo y recursos mientras interactúa con el Honeypot. Mientras ese proceso se lleva a cabo, se puede detectar la actividad del atacante y se tiene tiempo para reaccionar y detener el ataque. Además podremos mantener un estudio de como un atacante humano se mueve y pretende infiltrarse en nuestro sistema.
 
-- Métodos de Detección Precisa: Tradicionalmente, la detección ha sido una tarea extremadamente difícil de llevar a cabo. Las tecnologías como los Sistemas de Detección de Intrusos y sistemas de loggin han sido deficientes por diversas razones: Generan información en cantidades excesivas, grandes porcentajes de falsos positivos (o falsas alarmas), no cuentan con la habilidad de detectar nuevos ataques y/o de trabajar en forma encriptada. Los Honeypots son excelentes en el ramo de la detección, solventando muchos de los problemas de la detección clásica:
+- **Métodos de Detección Precisa:** Tradicionalmente, la detección ha sido una tarea extremadamente difícil de llevar a cabo. Las tecnologías como los Sistemas de Detección de Intrusos y sistemas de loggin han sido deficientes por diversas razones: Generan información en cantidades excesivas, grandes porcentajes de falsos positivos (o falsas alarmas), no cuentan con la habilidad de detectar nuevos ataques y/o de trabajar en forma encriptada. Los Honeypots son excelentes en el ramo de la detección, solventando muchos de los problemas de la detección clásica, reducen los falsos positivos, capturan pequeñas cantidades de datos de gran importancia como ataques desconocidos y nuevos métodos de explotación de vulnerabilidades además de poder trabajar de forma encriptada.
 
-  Reducen los falsos positivos, capturan pequeñas cantidades de datos de gran importancia como ataques desconocidos y nuevos métodos de explotación de vulnerabilidades además de poder trabajar de forma encriptada.
-
-- Labor Ciber-Forense: Una vez que un administrador de red se da cuenta que uno/s de sus servidores fueron comprometidos ilegalmente, es necesario proceder inmediatamente a realizar un análisis “forense” en el sistema comprometido para realizar un control de daños causados por el atacante. Sin embargo, hay dos
+- **Labor Ciber-Forense:** Una vez que un administrador de red se da cuenta que uno/s de sus servidores fueron comprometidos ilegalmente, es necesario proceder inmediatamente a realizar un análisis “forense” en el sistema comprometido para realizar un control de daños causados por el atacante. Sin embargo, hay dos
 problemas que afectan a la respuesta al incidente:
 
   - Frecuentemente, los sistemas comprometidos no pueden ser desconectados de la red para ser analizados.
