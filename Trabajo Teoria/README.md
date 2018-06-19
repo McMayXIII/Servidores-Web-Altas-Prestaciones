@@ -18,6 +18,8 @@ Los sistemas de detección de intrusos son una de las herramientas que más ha e
 
 La dificultad para analizar los binarios instalados en los equipos por los atacantes complica muchas veces la solución de estos ataques. Los administradores deben intentar eliminar todas las puertas traseras que se hayan podido dejar para entrar con facilidad en el equipo, al igual que los programas de recolección de claves que circulan en claro por la red (sniffer) y las herramientas de ataque a otros equipos.
 
+----
+
 ## HoneyPots.
 
 Los Honeypots son una tecnología nueva con enorme potencial para la comunidad informática. Los primeros conceptos fueron introducidos por primera vez por varios íconos en la seguridad informática, especialmente aquellos definidos por Cliff Stoll y Bill Cheswick. Desde entonces, han estado en una continua evolución, desarrollándose de manera acelerada y convirtiéndose en una poderosa herramienta de seguridad hoy en día.
@@ -55,6 +57,8 @@ problemas que afectan a la respuesta al incidente:
   - La cantidad de información que se genera es considerablemente extensa, de manera que es muy difícil determinar lo que hizo el atacante dentro del sistema.
 
 Los Honeypots ayudar a solventar ambos problemas, ya que son excelentes herramientas de análisis de incidencias que pueden rápida y fácilmente ser sacados de la red para un análisis forense completo, sin causar impacto en las operaciones empresariales diarias.
+
+----
 
 ## Clasificación de los Honeypots.
 
@@ -97,6 +101,7 @@ Las ventajas de dicha solución son dos:
 
   En consecuencia, se requiere la implementación de una tecnología adicional que prevenga al atacante el dañar otros sistemas que no son Honeypots o que prive al sistema comprometido de sus capacidades de convertirse en una plataforma de lanzamiento de ataques. Hoy por hoy, el mejor ejemplo de un Honeypot de alta interacción está representado en las Honeynets.
 
+----
 ## Ubicación de los Honeypots
 
 La ubicación de los Honeypots es esencial para maximizar su efectividad, ya que debido a su carácter intrínsecamente pasivo; una ubicación de difícil acceso eliminará gran parte de su atractivo para potenciales atacantes. Por otro lado, si su ubicación es demasiado artificial u obvia cualquier experimentado atacante la descubrirá y evitará todo contacto.
@@ -136,6 +141,8 @@ acceso al Honeypot y a la red.
 
   La detección de atacantes internos se ve algo debilitada, puesto que al no compartir el mismo segmento de red que la LAN, un atacante local no accederá al Honeypot. Sin embargo, desde la red local si es posible acceder al Honeypot, con lo que un atacante interno que intente atacar a los servidores públicos u otros sistemas externos por ejemplo un gusano, muy probablemente acabe siendo detectado.
 
+----
+
 ## Honeynets.
 
 Se puede definir una Honeynet como un tipo concreto de Honeypot.
@@ -168,6 +175,8 @@ Una Honeynet presenta dos requerimientos básicos para ser realmente útil y que
 
   Al igual que los Honeypots, la cantidad y calidad de información producida es muy importante, ya que cualquier actividad existente es sospechosa.
 
+----
+
 ## Ventajas y desventajas de los Honeypots.
 
 Las principales características y ventajas que nos ofrecen los sistemas basados en Honeypots son:
@@ -190,6 +199,64 @@ Como todo sistema tiene también unas contrapartidas o desventajas asociadas. En
 
 - Consumen una dirección IP como mínimo. De todas formas, este inconveniente es mínimo, ya que lo ideal es asignar direcciones IP del rango de direcciones libres.
 
+----
+
+## Honeystation: honeypot desarrollada en INCIBE
+
+Vamos a analizar un caso real de honeypot para observar su comportamiento ante ataques y ver que tipo de información somo capaces de extraer.
+
+#### Spoofing
+
+Ataques de denegación de servicio usando Ips falsificadas (spoofing) pertenecientes a un proveedor americano contra diversos servicios web.
+
+![img](image/img05.jpg)
+
+
+#### Ataque SSH
+
+Uso de servicios de un importante ASN extranjero, para realizar ataques SSH para comprometer servidores vulnerables y utilizarlos como proxy para obtener beneficios a través de pago por click.
+
+![img](image/img06.jpg)
+
+
+#### Información recopilada con Honeystation
+
+Mediante el uso de HONEYSTATION, se obtiene información en tiempo real sobre:
+
+- Origen del ataque
+- Nombre del ASN
+- Dirección IP del Atacante
+- Puerto Atacado
+- Número de intentos de ataque
+- Chequeo contra listas de reputación públicas y privadas.
+- Chequeo contra listas de reputación generadas por los propios honeypots.
+- Chequeo contra sistemas de identificación de intrusos
+- Chequeo contra WAF
+- Tendencias de ataques
+
+#### Monitorización
+
+No solo se monitorizan los puertos clásicos como 21,22, 23,445, 3389 0 5900, sino que se monitoriza todo el rango de puertos TCP/UDP con objeto de identificar los puertos/servicios atractivos para los atacantes y estudiar las acciones realizadas en ese puerto.
+
+Por otra parte, mediante correlación de eventos se obtiene valor de toda la información obtenida por los honeypots y la que ya disponemos en nuestros sistemas, permitiendo la generación de alertas a los departamentos encargados de gestionarlas.
+
+#### Visualización de resultados
+
+HONEYSTATION permite 3 tipos de vistas:
+
+- Vista Estado del Honeypot: Muestra una visión del estado actual de la Honey desplegada de forma jerarquizada (Pais - ASN - IP - Puerto - Honey). El sistema permite filtrar por cualquiera de los campos y mostrar solo aquella información por la que estamos interesados. Permite visualizar rankings de países, puertos y ASN atacantes así como visualizar los atacantes potenciales y, en el caso de disponer de información suficiente, el tipo de ataque realizado o como la clasificación de la dirección IP atacante al cotejarse con la información disponible.
+![img](image/img07.jpg)
+
+- Vista Geolocalización por país y nivel de ataque: Muestra el origen de los ataques hacia la Honey, informando del número de ataques registrados y la intensidad del ataque desde un determinado país. También da una visión simplificada de la vista Estado del Honeypot.
+![img](image/img08.jpg)
+
+- Vista Geolocalización precisa: Permite determinar de una forma más precisa la geolocalización del atacante, normalmente a nivel de comunidad, provincia o ciudad.
+![img](image/img09.jpg)
+
+***En el siguiente enlace podemos ver ejemplos de las diferentes vistas en tiempo real https://www.youtube.com/watch?v=Mc5h1i1SfmQ***
+
+----
+
 ## Conclusión de los Honeypots.
 
 Del análisis de todas las características principales de los Honeypots y aplicando el desglose del concepto de seguridad en prevención, detección y reacción, obtenemos el siguiente análisis:
@@ -199,6 +266,8 @@ Del análisis de todas las características principales de los Honeypots y aplic
 - Tienen un alto grado de detección. Si bien son elementos pasivos, los atacantes rara vez se centran en una simple máquina, sino que buscan por toda la red posibles víctimas, lo que hace que antes o después se encuentre con el Honeypot.
 
 - La reacción es otro de los valores que añade el uso de Honeypots. En los de Honeypots de producción se puede de forma automática generar los comandos necesarios para evitar el acceso del atacante al resto del sistema. En los de investigación, además nos permiten a posteriori la ejecución de técnicas forenses (computer forense) para examinar el comportamiento del atacante y descubrir sus comportamientos.
+
+----
 
 ## Bibliografía
 
@@ -217,5 +286,7 @@ https://blog.pandorafms.org/es/honey-pots/
 https://www.muyinteresante.es/curiosidades/preguntas-respuestas/ique-son-los-honey-pots
 
 https://www.sciencedirect.com/science/article/pii/S2095881116300038
+
+https://www.certsi.es/blog/honeypots
 
 **NOTA:** Imagenes sacadas de una tesis sobre HoneyPots.
